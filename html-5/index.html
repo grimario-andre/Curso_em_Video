@@ -30,10 +30,20 @@
     <!-- rodapé -->
     <footer>
         <script>
-            // adicionar variavel no prompt para exibir o conteudo com alert.
-            var nome = window.prompt('Qual é seu nome?');
-            window.alert('Prazer em te conhecer ' + nome + ' ! ');
-        </script>
+            /* criando operação para somar, se faz necessário converter valor recebido (string/int).
+             nova maneira de converter automatica int/float. */
+
+            var n1 = Number(window.prompt('Digite um número')); 
+            var n2 = Number.parseInt(window.prompt('Digite mais um número'));
+            var soma = (n1 + n2);
+
+            // também é possível fazer o processo reverso usando duas maneiras. (int/string)
+            /* Usando a crase pode-se ligar tuda a frase a tornando mais visivel ou menos poluída.
+              window.alert(`Os números foram somados e o resultado foi ${soma.toString()} .`);  
+            */
+            window.alert('Os números foram somados e o resultado foi ' + soma.toString() +'.'); //String(soma).
+
+        </script>    
     </footer>
 
 </body>
