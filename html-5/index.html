@@ -30,25 +30,24 @@
     <!-- rodapé -->
     <footer>
         <script>
-            /* criando operação para somar, se faz necessário converter valor recebido (string/int).
-             nova maneira de converter automatica int/float. */
-
-            var n1 = Number(window.prompt('Digite um número')); 
-            var n2 = Number.parseInt(window.prompt('Digite mais um número'));
-            var soma = (n1 + n2);
-
-            // também é possível fazer o processo reverso usando duas maneiras. (int/string)
-            /* Usando a crase pode-se ligar tuda a frase a tornando mais visivel ou menos poluída.
-              window.alert(`Os números foram somados e o resultado foi ${soma.toString()} .`);  
-            */
-            window.alert('Os números foram somados e o resultado foi ' + soma.toString() +'.'); //String(soma).
-
+           var nome = window.prompt('Digite seu nome.');
+           // comando para exibir conteudo.
+           document.write(`Ola ${nome} seu nome tem ${nome.length} letras <br> `); 
+           document.writeln('Seu nome maiúsculo é ' + nome.toUpperCase() + '<br>'); 
+           document.writeln(`Seu nome minusculo é ${nome.toLowerCase()}`);
         </script>    
     </footer>
 
+    /* 
+        var n1 = 1545.50;
+        n1.toFixed(2).replace('.', ',');
+        n1.toLocaleString('pt-BR', {style: 'currency', 'currency': 'BRL'});
+        n1.toLocaleString('pt-BR', {style: 'currency', 'currency': 'USD'});
+        n1.toLocaleString('pt-BR', {style: 'currency', 'currency': 'EUR'});
+
+    */
 </body>
 </html>
-
 <!-- 
  type of number {
     Nan (not a number).
