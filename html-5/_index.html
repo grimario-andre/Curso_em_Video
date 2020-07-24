@@ -7,36 +7,57 @@
     <title>Starting javacript</title>
 </head>
 <body>
-
+    <h3>Ácool ou Gasolina</h3> 
     <script>
-        console.log("Exercises!");
-
-        alert("Serão feitos alguns exercícios.");
-
-        document.write("Minha idade é: " + 29 + "<br>");
-        document.write("A soma das idades dos autores é: " + (25+36+26) + "<br>");
-        document.write("A méida de idade dos autores é: " + (25+36+26) /3 + "<br>");
-        document.write("A multiplicação por três da idade de cada autor será: " + (25 * 3) + " " + (36 * 3) + " " +  (26 * 3) + "<br>");
-
-        console.log("calculo de subtração.");
-        document.write("Minha idade é: " + 29 + " , e meu irmão tem: " + 25 + " <br>");
-        document.write("A diferença entre as idades é de: " + (29 - 25) + " anos <br>");
-        document.write("Casais que tem filhos aos 28 anos, a média de gerações é: " + (2020 / 28) + " <br>");
+        console.log("calculando consumo de gasolina.");
+        document.write("Meu carro com 40 litros de <strong>gasolina</strong> percorreu 480km, quantos quilômetros por litro foram feitos? <br> ");
         
-        console.log("Utalizando variáveis.");
-        var ano = 2020;
+        console.log("aplicando valores em variáveis.");
+        var km = 480; var litros = 40; var kmpl = " ";
 
-        console.log("Há diferença ao usar aspas em uma variável. ");
-        document.write("ano <br>");
-        document.write(ano + "<br>");
+        console.log("aplicando o calculo");
+        kmpl = (km / litros);
 
-        document.write("Eu nasci no ano: " + (2020 - 29) + "<br>");
-        document.write("Paulo nasceu no ano: " + (2020 - 42) + "<br>");
-        document.write("Adriano nasceu no ano: " + (2020 - 36) + "<br>");
+        document.write("Meu carro fez cerca de: " + kmpl + "km por litro <br>");
 
-        console.log("Arredondar valores.");
-        document.write("A média de idade é: " + Math.round((25+36+26) /3));
-        
+        console.log("calculando consumo de álcool");
+        document.write("Me carro com 40 litros de <strong>álcool</strong> percorreu 300km, quantos quilômetros por litro foram feitos: <br>");
+
+        console.log("aplicando o calculo");
+        var km = (km - 180);
+        var kmpl = (km / litros);
+
+        document.write("Desta vez com álcool, meu carro fez: " + kmpl + "km por litro. <br>");
+
+        console.log("Calculando preço do km com gasolina. ");
+
+        document.write("Com <strong>galosina</strong> coloquei 40 litros, o preço do litro custa 2.90, quanto gastei por cada km percorrido? <br> ");
+
+        console.log("aplicando calculo.");
+        var pcgas = 2.90; var pcalc = 2.40; var pckm = " ";
+
+        var kmpl = (km / litros);
+
+        var pckm = (kmpl / pcgas);
+
+        console.log("usar comando para quantas casas decimais devem aparecer. "); 
+        document.write("O preço da gasolina gasta por quilômetro é: " + pckm.toFixed(2) + "<br>"); 
+
+        console.log("calculando preço do km com álcool");
+        document.write("Já com <strong>álcool</strong> também coloquei 40 litros, mas o preço do litro custa 2.40 quanto gastei por cada km percorrido? <br> ");
+
+        console.log("aplicando calculo.");
+
+        var km = (km - 180);
+
+        var kmpl = (km / litros);
+
+        var pckm = (kmpl / pcalc);
+
+        document.write("O preço do álcool gasto por quilômetro é: " + pckm.toFixed(2) + "<br>"); 
+
     </script>
 </body>
 </html>
+
+<! -- pag 24 -->
