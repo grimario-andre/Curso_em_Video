@@ -4,19 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>minha página html</title>
+    <title>Starting javacript</title>
 </head>
 <body>
-    <h2>seria isso um programa?</h2>
-
-    <strong>Não</strong> <p> não consigo fazer nada além de mostrar conteúdo fixo?</p>
-
-    <p>Conheça o site da nossa editora:</p>
-    <a href="http://www.casadocodigo.com.br" target="_blank">Clique Aqui</a>!
 
     <script>
-        alert("Podemos fazer mais com Javascript! ");
-        alert("Comecei a programar em 08/08/2019! ");
+        // Alert serve para ter comunicação com o usuário mas exige dele a confirmação.
+        /*window.alert("olá mundo!");
+        alert("esse é meu segundo programa.");*/
+
+        // document.write também serve para comunição porém não exige dele um confirmação.
+        document.write("olá mundo! <br>");
+        document.write("esse é meu segundo programa. <br> ");
+        document.write("minha idade é: ");
+        document.write(25 + "<br>"); // utlizando números.
+
+        //console.log é usado como comentário para ser exibido console do browser.
+        console.log("Quando usamos números para calcular, não usa-se aspas. ");
+        document.write(25 + 25 + "<br>"); 
+        document.write("25 " + " 25");
+
+        console.log("Calculos utilizações as quatro operações! ");
+        document.write("<h2> A soma de nossa idades é:</h2> ");
+        document.write(25 + 36 + 26);
+
+        console.log("Calcular a média da idades entre os autores. ");
+        document.write("<h3>a média das nossas idades é:</h3> ");
+
+        console.log("Aplicar a ordem de precendência das operações nos calculos. ");
+        document.write((25 + 36 + 26) / 3);
+
+        document.write("<h4> A média das nossas idades é:</h4> " + (25 + 36 + 26) / 3);
     </script>
 </body>
 </html>
