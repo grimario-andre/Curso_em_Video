@@ -7,22 +7,11 @@
 
 <head>
     <!-- tag charset permite escolhe o padrão da linguagem a ser usada -->
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>Everything about google Glass</title>
     <title>Maldição HTML</title>
-    <!--tag style é usada para difinir estilos na formatação html de modo direto -->
-    <style>
-        body{
-            background-color: yellowgreen;
-            background-color: hsla(165, 81%, 50%, 0.6);
-            color: rgba(00, 00, 00, 0.6); /* trabalhando com cores nas formas Hexadecimal, rgb e rgba */
-        }
 
-        p{
-            text-align: justify;
-            text-indent: 50px;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="../projeto-glass-html5/_css/estilo.css" />
 </head>
 <!-- Corpo -->
 
@@ -57,20 +46,29 @@
 
         <h2>O que é</h2>
         <!-- tag p server para criar paragrafos -->
-        <p>O <b>Google Glass</b> é um acessório em forma de óculos que possibilita a interação dos usuários com diversos conteúdos
-        em realidade aumentada. Também chamado de <i>Project Glass</i>, o eletrônico é capaz de tirar fotos a partir de
-        <!-- tag &shy; tem a mesma função da <wbr/> porém ela adiciona o caractere hífen " - " a palavras que não o pussuem -->
-        comandos de voz, enviar mensagens instantâneas e realizar vídeo &shy; con &shy; ferên &shy;cias. Seu lançamento está previsto para
-        <!-- tag <em> defirente da <i> aplica um efeito de semantica dizendo ao site que deve-se dar ênfase tudo estiver entiver entre a tag. -->
-        2014, e seu preço deve ser de US$ 1,5 mil. Atualmente o <em>Google Glass</em> encontra-se em fase de testes e já possui
-        um vídeo totalmente gravado com o dispositivo. Além disso, a companhia de buscas registrou novas patentes
-        anti-furto e de desbloqueio de tela para o acessório.</p>
-
-        <img src="" alt=""/>[AQUI ENTRA UMA FOTO]
-
+        <p>O <b>Google Glass</b> é um acessório em forma de óculos que possibilita a interação dos usuários com diversos
+            conteúdos
+            em realidade aumentada. Também chamado de <i>Project Glass</i>, o eletrônico é capaz de tirar fotos a partir
+            de
+            <!-- tag &shy; tem a mesma função da <wbr/> porém ela adiciona o caractere hífen " - " a palavras que não o pussuem -->
+            comandos de voz, enviar mensagens instantâneas e realizar vídeo &shy; con &shy; ferên &shy;cias. Seu
+            lançamento está previsto para
+            <!-- tag <em> defirente da <i> aplica um efeito de semantica dizendo ao site que deve-se dar ênfase tudo estiver entiver entre a tag. -->
+            2014, e seu preço deve ser de US$ 1,5 mil. Atualmente o <em>Google Glass</em> encontra-se em fase de testes
+            e já possui
+            um vídeo totalmente gravado com o dispositivo. Além disso, a companhia de buscas registrou novas patentes
+            anti-furto e de desbloqueio de tela para o acessório.</p>
+        <figure class="foto_legenda">
+            <img src="../projeto-glass-html5/_imagens/glass-quadro-homem-mulher.jpg" alt="Google Galss" />
+            <figcaption>
+                <h3>&nbsp; Google Glass</h3>
+                <p>Uma nova maneira de ver o mundo</p>
+            </figcaption>
+        </figure>
         <h2>Data de lançamento</h2>
-        <p>Não há uma data específica e oficial para o dispositivo ser lançado, ainda. Pode ser que ele esteja disponível
-        em demonstrações a partir de 2013, mas seu lançamento para as lojas fica para, pelo menos, 2014.</p>
+        <p>Não há uma data específica e oficial para o dispositivo ser lançado, ainda. Pode ser que ele esteja
+            disponível
+            em demonstrações a partir de 2013, mas seu lançamento para as lojas fica para, pelo menos, 2014.</p>
 
         <h3>Especificações Técnicas</h3>
         Tabela Técnica do Google Glass Mar/2013
@@ -82,8 +80,8 @@
 
         <h4>Como funciona</h4>
         <p>De acordo com fontes próximas do Google, os óculos vão contar com uma pequena tela de LCD ou AMOLED na parte
-        superior e em frente aos olhos do usuário. Com o uso de uma câmera e GPS, você pode se situar, assim como
-        selecionar opções com o movimento da cabeça</p>
+            superior e em frente aos olhos do usuário. Com o uso de uma câmera e GPS, você pode se situar, assim como
+            selecionar opções com o movimento da cabeça</p>
 
         <!-- tag wbr é usada para quebrar palavras grandes dependendo da resolução -->
         <h4>O que você pode fazer com o Google Glasses</h4>
@@ -100,13 +98,16 @@
 
         <h4>Novidades no Glass</h4>
         <p>O Google enfim revelou as especificações completas do Google Glass, e com ele uma surpresa ainda inédita no
-        mercado: a gigante das buscas usará um sistema de áudio baseado na transdução por condução. Através das hastes
-        dos óculos, o som será transmitido para o ouvido do usuário por meio de microvibrações em determinados ossos de
-        sua cabeça, sem usar nenhum tipo de alto-<wbr/>falante.</p>
+            mercado: a gigante das buscas usará um sistema de áudio baseado na transdução por condução. Através das
+            hastes
+            dos óculos, o som será transmitido para o ouvido do usuário por meio de microvibrações em determinados ossos
+            de
+            sua cabeça, sem usar nenhum tipo de alto-<wbr/>falante.</p>
 
         <p>Além da surpresa do áudio, a tela montada a frente do olho do usuário também chamou atenção. Serão 640 x 360
-        pixels de resolução que, em proporção, equivaleria a um monitor de 25 polegadas de alta definição colocado a 2,5
-        metros de distância do espectador.</p>
+            pixels de resolução que, em proporção, equivaleria a um monitor de 25 polegadas de alta definição colocado a
+            2,5
+            metros de distância do espectador.</p>
 
         <p>&copy; &nbsp; Copyright 2013 - by Gustavo Guanabara</p>
         <p>&reg; Facebook | Twitter</p>
@@ -151,4 +152,4 @@
 
     <code>usada para exibir treços de códigos</code>
     <pre>usada para pré-formatado, usado muito para treços de códigos</pre>
---> 
+-->
