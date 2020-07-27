@@ -1,51 +1,69 @@
 <!DOCTYPE html>
-<html>
-<head lang="pt-br">
-    <meta charset="utf-8">
-    <title>Curso em Vídeo</title>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First class with DOM</title>
     <style>
         body{
-            background-color: rgba(40, 40, 199, 0.466);
-            color: brown;
-            font-size:large;
+            background-color: rgba(68, 125, 195, 0.8);
+            color: white;
+            font-size: 18pt;
+            font-style:normal;
             font-family: Arial, Helvetica, sans-serif;
-        }
-
-        h1{
-            color: chartreuse;
         }
     </style>
 </head>
 <body>
-    <!-- cabeçalho -->
-    <header>
-        <h1>First class with javascript</h1>
-    </header>
+    <h1 id="h1">iniciando o estudos DOM</h1>
+    <p>aqui vai o resultado</p>
+    <p><strong> Aprendendo a usar DOM em javascript </strong></p>
+    <p class="ju">capturando classe por getbyclassname</p>
+    <div name="hh">Clique aqui</div>
+    <div id="sa">Capturar por querySlector</div>
+    
+    <script>
+        // window.document.write(window.document.URL);
+        window.console.log("capturar obejtos por getbyTag.")
 
-    <!-- conteúdo -->
-    <div>
-        <p>Olá mundo!</p>
-    </div>
+        var corpo = window.document.body;
+        var p1= window.document.getElementsByTagName("p")[1];
+        var div = window.document.getElementsByTagName('div')[0];
+        window.document.write("Está escrito assim: " + p1.innerHTML + "<br>");
+        window.document.write("Está escrito na div: " + div.innerText + "<br>");
+        p1.style.color = "blue";
 
-    <!-- rodapé -->
-    <footer>
-        <script>
-           var nome = window.prompt('Digite seu nome.');
-           // comando para exibir conteudo.
-           document.write(`Ola ${nome} seu nome tem ${nome.length} letras <br> `); 
-           document.writeln('Seu nome maiúsculo é ' + nome.toUpperCase() + '<br>'); 
-           document.writeln(`Seu nome minusculo é ${nome.toLowerCase()}`);
-        </script>    
-    </footer>
+       
+        window.console.log("capturar obejtos por getbyID.");
+        /*
+        var _h1 = window.document.getElementById('h1');
+        _h1.style.backgroundColor = 'red';
+        _h1.innerText = 'Mundando o título <br>';
+        window.document.write("Está escrito " + _h1.innerHTML + "<br>")
+        */
 
-    /* 
-        var n1 = 1545.50;
-        n1.toFixed(2).replace('.', ',');
-        n1.toLocaleString('pt-BR', {style: 'currency', 'currency': 'BRL'});
-        n1.toLocaleString('pt-BR', {style: 'currency', 'currency': 'USD'});
-        n1.toLocaleString('pt-BR', {style: 'currency', 'currency': 'EUR'});
+        window.console.log("capturar obejetos por getbyName.")
 
-    */
+        var h1 = window.document.getElementsByName('hh')[0];
+        h1.innerText = 'jauenfd';
+        window.document.write("Esta escrito aqui " + h1.innerText + "<br>");
+
+
+        window.console.log("capturar objetos por gebyClassname.");
+
+        var cl = window.document.getElementsByClassName('ju')[0];
+        cl.style.backgroundColo = "red";
+        window.document.write("Esta escrtio aqui " + cl.innerHTML + "<br>");
+
+        window.console.log("Captura obejtos por querySelecto.");
+
+        var qs = window.document.querySelector('div#sa');
+        qs.style.color = 'black';
+        window.document.write("Escrito aqui: "+ qs.innerHTML);
+        qs.innerText = 'Mundando texto capturado por querySlector!';
+
+    </script>
 </body>
 </html>
 <!-- 
