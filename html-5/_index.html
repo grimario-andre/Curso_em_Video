@@ -7,35 +7,40 @@
     <title>Starting javacript</title>
 </head>
 <body>
-    <h3>Calcular idades</h3>
+    <h3>Calcular IMC</h3>
  
     <script>
-        console.log("Criar função para pular linhas.");
-        var lhr = function(){
-            document.write("<hr/>");
+        //Criar dialogo com usuário.
+
+        console.log("criar função pular linhas. ");
+        var pllinha = function(){
+            document.write("<hr> <br>");
         };
 
-        console.log("Criar função pular linha.");
-        var linha = function(){
-            document.write("<br><hr><br>");
-        }
-
-        console.log("Criar função com parâmetro para mostrar uma frase.");
+        console.log("criar função exibir mensagens. ");
         var mostra = function(frase){
-            console.log("adicionando a tag big a função para exibir toda vez que usar a função mostra.");
-            document.write("<big>"+ frase + "<big>"); 
-            linha();
-        }
+            document.write(frase);
+            pllinha();
+        };
 
-        console.log("testando a função mostra.");
-        // mostra("Usando funçoes para melhorar o código.");
+        console.log("Criar função para calcular imc. ");
+        var calcimc = function(altura, peso){
+            var imc = peso / (altura * altura);
+            return imc;
+        };
 
-        console.log("Inicio do código");
-        var ano = 2020;
+        var nome = window.prompt("Qual é seu nome?");
+        var _altura = window.prompt(nome + ", informe sua altura.");
+        var _peso = window.prompt("e também seu peso.");
 
-        mostra("Eu nasci em: " + (ano - 29));
-        mostra("Adriano nasceu em: " + (ano - 34));
-        mostra("Paulo nasceu em: " + (ano - 38));
+        var imc = calcimc(_altura,_peso);
+
+        mostra(nome + " seu imc é "+ imc.toFixed(2));
+        mostra("Ele esta " + (Math.round(imc) - 18.5) + " pontos acima do limite de magreza. ");
+        mostra("Ele esta " + (35 - Math.round(imc)) + " pontos abaixo do limite de obesidade mórbida. ");
+
+        
+       
     </script>    
 </body>
 </html>
