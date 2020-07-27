@@ -8,23 +8,36 @@
 </head>
 <body>
     <h3>Calcular idades</h3>
-
+ 
     <script>
         console.log("Criar função para pular linhas.");
-        var pulalinha = function(){
-            document.write("<hr>");
+        var lhr = function(){
+            document.write("<hr/>");
         };
+
+        console.log("Criar função pular linha.");
+        var linha = function(){
+            document.write("<br><hr><br>");
+        }
+
+        console.log("Criar função com parâmetro para mostrar uma frase.");
+        var mostra = function(frase){
+            console.log("adicionando a tag big a função para exibir toda vez que usar a função mostra.");
+            document.write("<big>"+ frase + "<big>"); 
+            linha();
+        }
+
+        console.log("testando a função mostra.");
+        // mostra("Usando funçoes para melhorar o código.");
 
         console.log("Inicio do código");
         var ano = 2020;
 
-        document.write("Eu nasci em: " + (ano - 29));
-        pulalinha();
-        document.write("Adriano nasceu em: " + (ano - 34));
-        pulalinha();
-        document.write("Paulo nasceu em: " + (ano - 38));
+        mostra("Eu nasci em: " + (ano - 29));
+        mostra("Adriano nasceu em: " + (ano - 34));
+        mostra("Paulo nasceu em: " + (ano - 38));
     </script>    
 </body>
 </html>
 
-<! -- pag 24 -->
+<! -- pag 29 -->
