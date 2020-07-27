@@ -12,35 +12,36 @@
     <script>
         //Criar dialogo com usuário.
 
-        console.log("criar função pular linhas. ");
-        var pllinha = function(){
+        console.log("Perguntar ao usuário qual a sua idade.");
+        var idade = window.prompt("Qual a sua idade?");
+
+        var plinha = function(){
             document.write("<hr> <br>");
         };
 
-        console.log("criar função exibir mensagens. ");
         var mostra = function(frase){
             document.write(frase);
-            pllinha();
+            plinha();
         };
 
-        console.log("Criar função para calcular imc. ");
-        var calcimc = function(altura, peso){
-            var imc = peso / (altura * altura);
-            return imc;
+        var calctvida = function(_dias){
+            var _dias = idade * 365;
+            mostra("Você já viveu de " + _dias + " dias. ");
+            return _dias;
         };
 
-        var nome = window.prompt("Qual é seu nome?");
-        var _altura = window.prompt(nome + ", informe sua altura.");
-        var _peso = window.prompt("e também seu peso.");
+        var calcbatimentos = function(batimentos){
+            var batimentos = calctvida() * 24 * 60 * 80;
+            mostra("Seu coração pulsou " + batimentos + " vezes.");
+            return batimentos;
+        };
 
-        var imc = calcimc(_altura,_peso);
+        var dias = calctvida(idade);
+        var batimentos = calcbatimentos(dias);
 
-        mostra(nome + " seu imc é "+ imc.toFixed(2));
-        mostra("Ele esta " + (Math.round(imc) - 18.5) + " pontos acima do limite de magreza. ");
-        mostra("Ele esta " + (35 - Math.round(imc)) + " pontos abaixo do limite de obesidade mórbida. ");
-
-        
        
+        
+
     </script>    
 </body>
 </html>
