@@ -7,56 +7,23 @@
     <title>Starting javacript</title>
 </head>
 <body>
-    <h3>Ácool ou Gasolina</h3> 
+    <h3>Calcular idades</h3>
+
     <script>
-        console.log("calculando consumo de gasolina.");
-        document.write("Meu carro com 40 litros de <strong>gasolina</strong> percorreu 480km, quantos quilômetros por litro foram feitos? <br> ");
-        
-        console.log("aplicando valores em variáveis.");
-        var km = 480; var litros = 40; var kmpl = " ";
+        console.log("Criar função para pular linhas.");
+        var pulalinha = function(){
+            document.write("<hr>");
+        };
 
-        console.log("aplicando o calculo");
-        kmpl = (km / litros);
+        console.log("Inicio do código");
+        var ano = 2020;
 
-        document.write("Meu carro fez cerca de: " + kmpl + "km por litro <br>");
-
-        console.log("calculando consumo de álcool");
-        document.write("Me carro com 40 litros de <strong>álcool</strong> percorreu 300km, quantos quilômetros por litro foram feitos: <br>");
-
-        console.log("aplicando o calculo");
-        var km = (km - 180);
-        var kmpl = (km / litros);
-
-        document.write("Desta vez com álcool, meu carro fez: " + kmpl + "km por litro. <br>");
-
-        console.log("Calculando preço do km com gasolina. ");
-
-        document.write("Com <strong>galosina</strong> coloquei 40 litros, o preço do litro custa 2.90, quanto gastei por cada km percorrido? <br> ");
-
-        console.log("aplicando calculo.");
-        var pcgas = 2.90; var pcalc = 2.40; var pckm = " ";
-
-        var kmpl = (km / litros);
-
-        var pckm = (kmpl / pcgas);
-
-        console.log("usar comando para quantas casas decimais devem aparecer. "); 
-        document.write("O preço da gasolina gasta por quilômetro é: " + pckm.toFixed(2) + "<br>"); 
-
-        console.log("calculando preço do km com álcool");
-        document.write("Já com <strong>álcool</strong> também coloquei 40 litros, mas o preço do litro custa 2.40 quanto gastei por cada km percorrido? <br> ");
-
-        console.log("aplicando calculo.");
-
-        var km = (km - 180);
-
-        var kmpl = (km / litros);
-
-        var pckm = (kmpl / pcalc);
-
-        document.write("O preço do álcool gasto por quilômetro é: " + pckm.toFixed(2) + "<br>"); 
-
-    </script>
+        document.write("Eu nasci em: " + (ano - 29));
+        pulalinha();
+        document.write("Adriano nasceu em: " + (ano - 34));
+        pulalinha();
+        document.write("Paulo nasceu em: " + (ano - 38));
+    </script>    
 </body>
 </html>
 
