@@ -1,22 +1,36 @@
 Algoritmo "calcularmedia"
-// 
-//  
 // Descrição   : Aqui você descreve o que o programa faz! (função)
 // Autor(a)    : Nome do(a) aluno(a)
-// Data atual  : 23/7/2020
+// Data atual  : 30/7/2020
 Var
 // Seção de Declarações das variáveis 
-nt1, nt2, md:real
 
+   nt1, nt2, media: real
 Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc... 
-escreva("Informar uma nota. ")
-leia(nt1)
-escreva("A próxima nota. ")
-leia(nt2)
-
-md <- (nt1 + nt2) /2
-
-escreva("A média entre as notas é: ", md)
+   escreval("--------------------------------")
+   escreval("-----Escola Texugo Furioso----- ")
+   escreval("--------------------------------")
+   
+   escreval("Digite a 1° nota: ")
+   leia(nt1)
+   
+   escreval("Digite a 2° nota: ")
+   leia(nt2)
+   
+   escreval("")
+   
+   media <- (nt1 + nt2) / 2
+   
+   escreval("Média do Aluno: ", media)
+   
+   //verificar se esta ou nao aprovado.
+   
+   Se media >= 7 Entao
+      escreva("Aluno aprovado!")
+      
+      Senao
+      escreva("Aluno reprovado!")
+   Fimse
 
 Fimalgoritmo

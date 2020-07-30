@@ -22,6 +22,15 @@ idade <- ano - anonasci
 
 escreva("")
 
-escreva("Parabens Creuza, você tem ", dade , " anos.")
+escreva("Parabens Creuza, você tem ", idade , " anos.")
+
+escreval("")
+
+Se idade >= 18 ENTAO
+   escreva("Você atingiu a menor idade.")
+   
+   Senao
+        escreva("Você é menor de idade.")
+Fimse
 
 Fimalgoritmo
