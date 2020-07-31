@@ -1,35 +1,70 @@
 <!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Starting javacript</title>
 </head>
+
 <body>
-    <h3>Calcular IMC</h3>
- 
+    <h3>Pontuação Brasileirão</h3>
+
     <script>
-        console.log("Criar três funções para serem lidas em uma ordem. ");
-        var primeira = function(){
-            console.log("1 - antes.");
-            segunda();
-            console.log("1- depois");
-        }
+        console.log("Pontuação do time: ");
 
-        var segunda = function(){
-            console.log("2 - antes");
-            terceira();
-            console.log("2 - depois");
-        }
+        var pulaLinha = function () {
+            document.write("<br>");
+        };
 
-        var terceira = function(){
-            console.log("3");
-        }
+        var mostra = function (frase) {
+            document.write(frase);
+            pulaLinha();
+        };
 
-        primeira();
-    </script>    
+        console.log("Criar intereção com usuário.");
+        var time1 = prompt("Qual é seu time?");
+        var vitorias = parseInt(prompt("Informe quantas vitórias seu time tem?"));
+        var empates = parseInt(prompt("quantos empates?"));
+        var derrotas = parseInt(prompt("quantas derrotas sofridas? "));
+        //var derrotas = prompt("quantas derrotas? ");
+        var pontos = calcpontos();
+
+        function calcpontos(_vitorias, _empates, _derrotas) {
+            var _vitorias = vitorias;
+            var _empates = empates;
+            var _derrotas = derrotas;
+            var pontos = ((_vitorias * 3) + _empates) - (_derrotas * - 1);
+
+            return pontos;
+        };
+
+        mostra(time1 + " possui " + pontos + " pontos no campeonato <br>");
+
+        console.log("Criar intereção com usuário novamente.");
+        var time2 = prompt("Qual é seu time?");
+        var vitorias = parseInt(prompt("Informe quantas vitórias seu time tem?"));
+        var empates = parseInt(prompt("quantos empates?"));
+        var derrotas = parseInt(prompt("quantas derrotas sofridas? "));
+        //var derrotas = prompt("quantas derrotas? ");
+        var _pontos = calcpontos();
+
+        mostra(time2 + " possui " + _pontos + " pontos no campeonato <br>");
+
+        console.log("verificar diferenças na pontuação. ");
+        if (pontos > _pontos) {
+            mostra(time1 + " e esta na frente do" + time2);
+        } else {
+            if (pontos == _pontos) {
+                mostra(time1 + " e " + time2 + " a mesma pontuação. ");
+            }else {
+                mostra(time2 + " continua na liderança.");
+            };
+        };
+    </script>
 </body>
+
 </html>
 
 <! -- pag 29 -->
