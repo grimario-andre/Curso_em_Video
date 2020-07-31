@@ -1,70 +1,67 @@
 <!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capturing elements with DOM</title>
+    <title>Somando valores</title>
     <style>
-        body{
+        
+        body {
             background-color: rgba(68, 125, 195, 0.8);
             color: white;
             font-size: 18pt;
-            font-style:normal;
+            font-style: normal;
             font-family: Arial, Helvetica, sans-serif;
-        
-        
+
+
 
         }
 
-        div#area{
+        input{
             font-size: 18pt;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            background-color: green;
-            color: white;
-            width: 200px;
-            height: 200px;
-            line-height: 200px;
-            text-align: center;
+            width: 150px;
+        }
 
+        div#res{
+            margin-top: 20px;
         }
     </style>
 </head>
+
 <body>
-    <div id="area"> <!-- onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()" -->
-        Interaja...
-    </div>
+    <h1>Somando valores</h1>
+    <input type="number" value="txtn1" id="txtn1">
+
+    <input type="number" value="txtn2" id="txtn2">
+
+    <input type="button" value="somar" onclick="somar()">
     
+    <div id="res">
+        Resultado
+    </div>
+
     <script>
+        function somar(){
+            // caputara elementos com getbyId ou queryselector.
+            var tn1 = window.document.getElementById('txtn1');
+            var tn2 = window.document.querySelector('input#txtn2');
+            var res = window.document.getElementById('res');
 
-        // E possivel tornar variaveis que capturam elemento como globais. 
-        var area = window.document.getElementById('area');
-        
-        //outra forma de charmar os eventos e utilizar o addEventListener().
-        area.addEventListener('click',clicar);
-        area.addEventListener('mouseenter', entrar);
-        area.addEventListener('mouseout',sair);
+            //converter os valores capturador em string para número.
+            var n1 = Number(tn1.value);
+            var n2 = parseInt(tn2.value);
 
-        function clicar (){
-            area.innerText = 'Clicou';
-            area.style.backgroundColor = 'red'
+            var s = (n1 + n2);
+            res.innerHTML = `<h1> A soma ente ${n1} e ${n2} é ${s}</h1> `;
+
         }
 
-        function entrar(){
-                area.innerText = 'Entrou';
-            //var entrar = window.document.getElementById('area');
-            //entrar.innerText = 'Entrou';
-        }
-
-        function sair(){
-            area.innerText = 'Saiu';  
-            area.style.backgroundColor = 'green';
-            //var sair = window.document.getElementById('area');
-            //sair.innerText = 'Saiu';
-        }
 
     </script>
 </body>
+
 </html>
 <!-- 
  type of number {
