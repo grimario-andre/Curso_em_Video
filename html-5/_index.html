@@ -10,38 +10,24 @@
     <h3>Calcular IMC</h3>
  
     <script>
-        //Criar dialogo com usuário.
+        console.log("Criar três funções para serem lidas em uma ordem. ");
+        var primeira = function(){
+            console.log("1 - antes.");
+            segunda();
+            console.log("1- depois");
+        }
 
-        console.log("Perguntar ao usuário qual a sua idade.");
-        var idade = window.prompt("Qual a sua idade?");
+        var segunda = function(){
+            console.log("2 - antes");
+            terceira();
+            console.log("2 - depois");
+        }
 
-        var plinha = function(){
-            document.write("<hr> <br>");
-        };
+        var terceira = function(){
+            console.log("3");
+        }
 
-        var mostra = function(frase){
-            document.write(frase);
-            plinha();
-        };
-
-        var calctvida = function(_dias){
-            var _dias = idade * 365;
-            mostra("Você já viveu de " + _dias + " dias. ");
-            return _dias;
-        };
-
-        var calcbatimentos = function(batimentos){
-            var batimentos = calctvida() * 24 * 60 * 80;
-            mostra("Seu coração pulsou " + batimentos + " vezes.");
-            return batimentos;
-        };
-
-        var dias = calctvida(idade);
-        var batimentos = calcbatimentos(dias);
-
-       
-        
-
+        primeira();
     </script>    
 </body>
 </html>
