@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>First class with DOM</title>
+    <title>Capturing elements with DOM</title>
     <style>
         body{
             background-color: rgba(68, 125, 195, 0.8);
@@ -12,56 +12,56 @@
             font-size: 18pt;
             font-style:normal;
             font-family: Arial, Helvetica, sans-serif;
+        
+        
+
+        }
+
+        div#area{
+            font-size: 18pt;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+
         }
     </style>
 </head>
 <body>
-    <h1 id="h1">iniciando o estudos DOM</h1>
-    <p>aqui vai o resultado</p>
-    <p><strong> Aprendendo a usar DOM em javascript </strong></p>
-    <p class="ju">capturando classe por getbyclassname</p>
-    <div name="hh">Clique aqui</div>
-    <div id="sa">Capturar por querySlector</div>
+    <div id="area"> <!-- onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()" -->
+        Interaja...
+    </div>
     
     <script>
-        // window.document.write(window.document.URL);
-        window.console.log("capturar obejtos por getbyTag.")
 
-        var corpo = window.document.body;
-        var p1= window.document.getElementsByTagName("p")[1];
-        var div = window.document.getElementsByTagName('div')[0];
-        window.document.write("Está escrito assim: " + p1.innerHTML + "<br>");
-        window.document.write("Está escrito na div: " + div.innerText + "<br>");
-        p1.style.color = "blue";
+        // E possivel tornar variaveis que capturam elemento como globais. 
+        var area = window.document.getElementById('area');
+        
+        //outra forma de charmar os eventos e utilizar o addEventListener().
+        area.addEventListener('click',clicar);
+        area.addEventListener('mouseenter', entrar);
+        area.addEventListener('mouseout',sair);
 
-       
-        window.console.log("capturar obejtos por getbyID.");
-        /*
-        var _h1 = window.document.getElementById('h1');
-        _h1.style.backgroundColor = 'red';
-        _h1.innerText = 'Mundando o título <br>';
-        window.document.write("Está escrito " + _h1.innerHTML + "<br>")
-        */
+        function clicar (){
+            area.innerText = 'Clicou';
+            area.style.backgroundColor = 'red'
+        }
 
-        window.console.log("capturar obejetos por getbyName.")
+        function entrar(){
+                area.innerText = 'Entrou';
+            //var entrar = window.document.getElementById('area');
+            //entrar.innerText = 'Entrou';
+        }
 
-        var h1 = window.document.getElementsByName('hh')[0];
-        h1.innerText = 'jauenfd';
-        window.document.write("Esta escrito aqui " + h1.innerText + "<br>");
-
-
-        window.console.log("capturar objetos por gebyClassname.");
-
-        var cl = window.document.getElementsByClassName('ju')[0];
-        cl.style.backgroundColo = "red";
-        window.document.write("Esta escrtio aqui " + cl.innerHTML + "<br>");
-
-        window.console.log("Captura obejtos por querySelecto.");
-
-        var qs = window.document.querySelector('div#sa');
-        qs.style.color = 'black';
-        window.document.write("Escrito aqui: "+ qs.innerHTML);
-        qs.innerText = 'Mundando texto capturado por querySlector!';
+        function sair(){
+            area.innerText = 'Saiu';  
+            area.style.backgroundColor = 'green';
+            //var sair = window.document.getElementById('area');
+            //sair.innerText = 'Saiu';
+        }
 
     </script>
 </body>
