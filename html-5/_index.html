@@ -23,14 +23,12 @@
             pulaLinha();
         };
 
-        console.log("Criar intereção com usuário.");
-        var time1 = prompt("Qual é seu time?");
-        var vitorias = parseInt(prompt("Informe quantas vitórias seu time tem?"));
-        var empates = parseInt(prompt("quantos empates?"));
-        var derrotas = parseInt(prompt("quantas derrotas sofridas? "));
-        //var derrotas = prompt("quantas derrotas? ");
-        var pontos = calcpontos();
-
+        /*
+        function calcpontos(_vitorias, _empates, _derrotas) {
+            return ((_vitorias * 3) + _empates) - (_derrotas * - 1);
+        }; 
+            */
+   
         function calcpontos(_vitorias, _empates, _derrotas) {
             var _vitorias = vitorias;
             var _empates = empates;
@@ -39,6 +37,15 @@
 
             return pontos;
         };
+           
+
+        console.log("Criar intereção com usuário.");
+        var time1 = prompt("Qual é seu time?");
+        var vitorias = parseInt(prompt("Informe quantas vitórias seu time tem?"));
+        var empates = parseInt(prompt("quantos empates?"));
+        var derrotas = parseInt(prompt("quantas derrotas sofridas? "));
+        //var derrotas = prompt("quantas derrotas? ");
+        var pontos = calcpontos();
 
         mostra(time1 + " possui " + pontos + " pontos no campeonato <br>");
 
