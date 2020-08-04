@@ -46,12 +46,17 @@ nav#menu{
    display: block;
 }
 
+nav#menu li:hover{
+    background-color: #606060;
+
+}
+
 nav#menu h1{
     display: none;
 }
 
 /*formatação do menu */
-#menu ul {
+nav#menu ul {
     list-style: none;
     text-transform: uppercase;
     position: absolute;
@@ -59,9 +64,20 @@ nav#menu h1{
     left: 600px;
 }
 
-#menu li{
+nav#menu li{
     display: inline-block;
     background-color: #dddddd;
     padding: 5px;
     margin: 5px;
+    transition: background-color 1s;
+}
+
+nav#menu a{
+    color: rgba(00, 00, 00, 0.7);
+    text-decoration:none;
+}
+
+nav#menu a:hover{
+    color: white;
+    text-decoration: underline;
 }
