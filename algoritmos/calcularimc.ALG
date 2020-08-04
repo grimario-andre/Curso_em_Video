@@ -37,16 +37,14 @@ Inicio
                escreva("Você estao com sobrepeso.")
 
             Senao
-               se(Imc >= 30) E (imc <35)Entao
+               se(imc >= 30) E (imc <35)Entao
                   escreva("Você com obsidade.")
 
                Senao
                   se(imc >= 35) E (imc < 40)Entao
                      escreva("Você esta com obesidade severa.")
                   Senao
-                     Se(imc > 40)entao
-                        escreva("Você tem obesidade Mórbidae.")
-                     Fimse
+                        escreva("Você tem obesidade Mórbida.")
                   Fimse
                Fimse
             Fimse
