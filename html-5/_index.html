@@ -9,66 +9,46 @@
 </head>
 
 <body>
-    <h3>Pontuação Brasileirão</h3>
+    <h3>Adivinhe o número!</h3>
 
     <script>
-        console.log("Pontuação do time: ");
+        window.console.log("Criar função para pular linha. ");
+        mostra = function (frase) {
+            window.document.write(frase + "<br><hr>");
+        }
 
-        var pulaLinha = function () {
-            document.write("<br>");
-        };
+        window.console.log("usar função que captura numeros aleatórios.");
+        var sorteio = function (n) {
+            return Math.round(Math.random() * n);
+        }
 
-        var mostra = function (frase) {
-            document.write(frase);
-            pulaLinha();
-        };
+        window.console.log("Converter número capturado. ");
+        var chute = parseInt(window.prompt("Digite o valor do chute. "));
 
-        /*
-        function calcpontos(_vitorias, _empates, _derrotas) {
-            return ((_vitorias * 3) + _empates) - (_derrotas * - 1);
-        }; 
-            */
-   
-        function calcpontos(_vitorias, _empates, _derrotas) {
-            var _vitorias = vitorias;
-            var _empates = empates;
-            var _derrotas = derrotas;
-            var pontos = ((_vitorias * 3) + _empates) - (_derrotas * - 1);
+        nPensado = sorteio(chute);
 
-            return pontos;
-        };
-           
+        window.console.log("Verificar se chute é um número. ");
 
-        console.log("Criar intereção com usuário.");
-        var time1 = prompt("Qual é seu time?");
-        var vitorias = parseInt(prompt("Informe quantas vitórias seu time tem?"));
-        var empates = parseInt(prompt("quantos empates?"));
-        var derrotas = parseInt(prompt("quantas derrotas sofridas? "));
-        //var derrotas = prompt("quantas derrotas? ");
-        var pontos = calcpontos();
-
-        mostra(time1 + " possui " + pontos + " pontos no campeonato <br>");
-
-        console.log("Criar intereção com usuário novamente.");
-        var time2 = prompt("Qual é seu time?");
-        var vitorias = parseInt(prompt("Informe quantas vitórias seu time tem?"));
-        var empates = parseInt(prompt("quantos empates?"));
-        var derrotas = parseInt(prompt("quantas derrotas sofridas? "));
-        //var derrotas = prompt("quantas derrotas? ");
-        var _pontos = calcpontos();
-
-        mostra(time2 + " possui " + _pontos + " pontos no campeonato <br>");
-
-        console.log("verificar diferenças na pontuação. ");
-        if (pontos > _pontos) {
-            mostra(time1 + " e esta na frente do" + time2);
+        window.console.log("Verificar se chute é um numero, se é igual, menor ou maior ao número sorteado. ");
+        if (isNaN(chute)) {
+            mostra(`Você não digitou um número! `);
         } else {
-            if (pontos == _pontos) {
-                mostra(time1 + " e " + time2 + " a mesma pontuação. ");
-            }else {
-                mostra(time2 + " continua na liderança.");
-            };
-        };
+
+            if (chute != nPensado) {
+                mostra("Desculpe, não foi dessa vez. <br> ");
+                if (chute > nPensado) {
+                    mostra(`Seu chute foi maior: <strong>${chute}</strong>. <br>`);
+                } else {
+                    mostra(`Seu chute foi menor: <strong>${chute}</strong>. <br>`);
+                }
+
+                mostra(`O valor do número sorteado foi: <strong>${nPensado}</strong>.`);
+            } else {
+                mostra("Parabéns, ótimo chute! ");
+            }
+
+        }
+
     </script>
 </body>
 
