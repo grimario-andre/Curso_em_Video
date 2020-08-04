@@ -9,49 +9,43 @@
 </head>
 
 <body>
-    <h3>Adivinhe o número!</h3>
+    <h3>Contagem dos Anos da Copa do Mundo!</h3>
 
     <script>
         window.console.log("Criar função para pular linha. ");
         mostra = function (frase) {
-            window.document.write(frase + "<br><hr>");
+            window.document.write(`${frase} <br><hr>`);
         }
 
-        window.console.log("usar função que captura numeros aleatórios.");
-        var sorteio = function (n) {
-            return Math.round(Math.random() * n);
+        var toNumber = function(){
+            return anoLimite = Number(window.prompt("Informe o ano limite. "));
         }
 
-        window.console.log("Converter número capturado. ");
-        var chute = parseInt(window.prompt("Digite o valor do chute. "));
+        window.console.log("calcular ano da copa.");
 
-        nPensado = sorteio(chute);
+        anoLimite = toNumber();
 
-        window.console.log("Verificar se chute é um número. ");
+        anoCopa = 1930;
+        if (isNaN(anoLimite)) {
+            mostra(`Você não digitou um número.`);
 
-        window.console.log("Verificar se chute é um numero, se é igual, menor ou maior ao número sorteado. ");
-        if (isNaN(chute)) {
-            mostra(`Você não digitou um número! `);
         } else {
-
-            if (chute != nPensado) {
-                mostra("Desculpe, não foi dessa vez. <br> ");
-                if (chute > nPensado) {
-                    mostra(`Seu chute foi maior: <strong>${chute}</strong>. <br>`);
-                } else {
-                    mostra(`Seu chute foi menor: <strong>${chute}</strong>. <br>`);
+            if (anoLimite <= anoCopa) {
+                mostra(`Você digitou um ano inválido.`);
+            } else {
+                while (anoCopa <= anoLimite) {
+                    mostra(`${anoCopa} tem Copa do Mundo!`);
+                    anoCopa = anoCopa + 4;
                 }
 
-                mostra(`O valor do número sorteado foi: <strong>${nPensado}</strong>.`);
-            } else {
-                mostra("Parabéns, ótimo chute! ");
+                mostra(`Ufa! Esses foram os anos que tiveram copa até ${anoLimite}`);
             }
-
         }
+
 
     </script>
 </body>
 
 </html>
 
-<! -- pag 29 -->
+<! -- pag 66 -->
