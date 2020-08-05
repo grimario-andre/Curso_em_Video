@@ -17,30 +17,55 @@
             window.document.write(`${frase} <br><hr>`);
         }
 
-        var toNumber = function(){
-            return anoLimite = Number(window.prompt("Informe o ano limite. "));
+        window.console.log("Criar função para capturar o valor do prompt. ");
+        var toNumber = function () {
+            return anoLimite = Number(window.prompt("Informe o ano Final. "));
         }
 
-        window.console.log("calcular ano da copa.");
+        window.console.log("Criar função para capturar o valor do prompt. ");
+        var toNumber1 = function () {
+            return anoCopa = Number(window.prompt("Informe o ano Incial. "));
+        }
 
         anoLimite = toNumber();
+        anoCopa = toNumber1();
 
-        anoCopa = 1930;
+        window.console.log("verifircar se anoCopa é padrao ou não.");
+        if (isNaN(anoCopa)) {
+            mostra(`Você não digitiou um número.`);
+        } else {
+            if ((anoCopa == " ") || (anoCopa < 1930)) {
+                anoCopa = 1930;
+            } else {
+                anoCopa = anoCopa;
+            };
+        };
+
+        window.console.log("verificar se anoLimite é valido ou não.");
         if (isNaN(anoLimite)) {
             mostra(`Você não digitou um número.`);
 
         } else {
-            if (anoLimite <= anoCopa) {
-                mostra(`Você digitou um ano inválido.`);
+            if (anoLimite < 1930) {
+                mostra(`Você digitou um número inválido`);
             } else {
-                while (anoCopa <= anoLimite) {
-                    mostra(`${anoCopa} tem Copa do Mundo!`);
-                    anoCopa = anoCopa + 4;
-                }
+                if (anoLimite <= anoCopa) {
+                    while (anoCopa >= anoLimite) {
+                        mostra(`${anoCopa} tem Copa do Mundo!`);
+                        anoCopa = anoCopa - 4;
+                    };
 
-                mostra(`Ufa! Esses foram os anos que tiveram copa até ${anoLimite}`);
-            }
-        }
+                    mostra(`Ufa! Esses foram os anos que tiveram copa até ${anoLimite}`);
+                } else {
+                    while (anoCopa <= anoLimite) {
+                        mostra(`${anoCopa} tem Copa do Mundo!`);
+                        anoCopa = anoCopa + 4;
+                    };
+
+                    mostra(`Ufa! Esses foram os anos que tiveram copa até ${anoLimite}`);
+                };
+            };
+        };
 
 
     </script>
