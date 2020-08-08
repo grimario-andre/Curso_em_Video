@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -9,64 +8,22 @@
 </head>
 
 <body>
-    <h3>Contagem dos Anos da Copa do Mundo!</h3>
+    <h3>Estrutura Enquanto tabuada!</h3>
 
     <script>
         window.console.log("Criar função para pular linha. ");
         mostra = function (frase) {
             window.document.write(`${frase} <br><hr>`);
-        }
-
-        window.console.log("Criar função para capturar o valor do prompt. ");
-        var toNumber = function () {
-            return anoLimite = Number(window.prompt("Informe o ano Final. "));
-        }
-
-        window.console.log("Criar função para capturar o valor do prompt. ");
-        var toNumber1 = function () {
-            return anoCopa = Number(window.prompt("Informe o ano Incial. "));
-        }
-
-        anoLimite = toNumber();
-        anoCopa = toNumber1();
-
-        window.console.log("verifircar se anoCopa é padrao ou não.");
-        if (isNaN(anoCopa)) {
-            mostra(`Você não digitiou um número.`);
-        } else {
-            if ((anoCopa == " ") || (anoCopa < 1930)) {
-                anoCopa = 1930;
-            } else {
-                anoCopa = anoCopa;
-            };
         };
 
-        window.console.log("verificar se anoLimite é valido ou não.");
-        if (isNaN(anoLimite)) {
-            mostra(`Você não digitou um número.`);
-
-        } else {
-            if (anoLimite < 1930) {
-                mostra(`Você digitou um número inválido`);
-            } else {
-                if (anoLimite <= anoCopa) {
-                    while (anoCopa >= anoLimite) {
-                        mostra(`${anoCopa} tem Copa do Mundo!`);
-                        anoCopa = anoCopa - 4;
-                    };
-
-                    mostra(`Ufa! Esses foram os anos que tiveram copa até ${anoLimite}`);
-                } else {
-                    while (anoCopa <= anoLimite) {
-                        mostra(`${anoCopa} tem Copa do Mundo!`);
-                        anoCopa = anoCopa + 4;
-                    };
-
-                    mostra(`Ufa! Esses foram os anos que tiveram copa até ${anoLimite}`);
-                };
-            };
+        console.log("Aplicar looping enquanto");
+        var mult = window.prompt("Informe um número ");
+        var cont = 0;
+        while (cont <= 10) {
+            var r = mult * cont;
+            mostra(`${mult} x ${cont} = ${r} `);
+            cont = cont + 1;
         };
-
 
     </script>
 </body>
