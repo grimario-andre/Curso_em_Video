@@ -8,29 +8,30 @@
 </head>
 
 <body>
-    <h3>Estrutura Enquanto tabuada!</h3>
+    <h3>Adivinhe o número!</h3>
 
     <script>
-        window.console.log("Criar função para pular linha. ");
-        mostra = function (frase) {
-            window.document.write(`${frase} <br><hr>`);
+        var mostra = function (frase) {
+            return window.document.write(frase + "<br><hr>");
         };
 
-        console.log("Aplicar looping enquanto");
-        var mult = window.prompt("Informe um número ");
-        /*
-            var cont = 0;
-            while (cont <= 10) {
-            var r = mult * cont;
-            mostra(`${mult} x ${cont} = ${r} `);
-            cont = cont + 1;
-        };  */
+        var np = Math.round(Math.random() * 5);
 
-       for(cont = 0; cont <= 10; cont ++){
-            var r = mult * cont;
-            mostra(`${mult} x ${cont} = ${r} `);
-       };
+        var ntentativas = 1;
+        while (true && np != chute) {
 
+            var chute = window.prompt("Qual você acha que é? ");
+
+            if (chute == np) {
+                mostra(`Parabens, você acertou! `);
+            } else {
+                if (chute < np) {
+                    mostra(`Hmmmm um pouco menos, quem sabe na próxima. `);
+                }else{
+                    mostra(`Hmmm um pocuo mais, tenta na próxima. `);
+                };
+            } 
+        }
     </script>
 </body>
 
