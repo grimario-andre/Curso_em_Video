@@ -1,12 +1,14 @@
 @charset "utf-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
 body{
     background-color:#dddddd;
     color:  rgba(00, 00, 00, 1);
 }
 
 div#interface{
-    width: 900px;
+    width: 1080px;
     background-color: white;
     margin: -20px auto 0px auto;
     padding: 10px;
@@ -20,13 +22,35 @@ p{
 
 header#cabecalho img#icone{
     position: absolute;
-    left: 800px;
-    top: 35px;
+    left: 1180px;
+    top: 70px;
 }
 
 header#cabecalho{
-    height: auto;
+    border-bottom: 1px #060606 solid;
+    height: 150px;
+    background-image: url(../_imagens/glass-logo-peq.jpg);
+    background-repeat: no-repeat;
+    background-position: 0px 100px;
 }
+
+header#cabecalho h1{
+   font-family: 'Fontelogo', Helvetica, sans-serif;
+   font-size: 30pt;
+   color: #606060; 
+   text-shadow: 1px 1px 1px rgba(00, 00, 00, 0.6);
+   padding: 0px;
+   margin: 0px;
+}
+
+header#cabecalho h2{
+    font-family: 'Titillium Web', sans-serif;
+    color: #888888;
+    font-size: 15pt;
+    padding: 0px;
+    margin: 0px;
+}
+
 
 /* formatação de imagens com legendas */
 
@@ -79,7 +103,7 @@ nav#menu ul {
     text-transform: uppercase;
     position: absolute;
     top: -20px;
-    left: 600px;
+    left: 800px;
 }
 
 nav#menu li{
