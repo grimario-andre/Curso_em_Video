@@ -8,30 +8,20 @@
 </head>
 
 <body>
-    <h3>Adivinhe o número!</h3>
+    <h3>Exibindo Asterísticos!</h3>
 
     <script>
         var mostra = function (frase) {
             return window.document.write(frase + "<br><hr>");
         };
+        
 
-        var np = Math.round(Math.random() * 5);
-
-        var ntentativas = 1;
-        while (true && np != chute) {
-
-            var chute = window.prompt("Qual você acha que é? ");
-
-            if (chute == np) {
-                mostra(`Parabens, você acertou! `);
-            } else {
-                if (chute < np) {
-                    mostra(`Hmmmm um pouco menos, quem sabe na próxima. `);
-                }else{
-                    mostra(`Hmmm um pocuo mais, tenta na próxima. `);
-                };
-            } 
-        }
+        for (linha = 0; linha < 10; linha ++) {
+            for(coluna = 1; coluna <= linha; coluna ++){
+                window.document.write("*");
+            };
+            window.document.write("<br>");
+        };
     </script>
 </body>
 

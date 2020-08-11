@@ -1,37 +1,31 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Somando valores</title>
-    <style>
-    </style>
+    <link rel="stylesheet" type="text/css" href="../css-3/estilo.css">
+    <title>Hora do dia</title>
 </head>
 
-<body>
-    <h1>Sistemas de Nacionalidade</h1>
-    
-    Informe seu país: <input type="text" name="txtpais" id="txtpais">
-    <input type="button" value="verificar" onclick="verifica()">
-    
-    <div id="res">
+<body onload="carregar()">
+    <header>
+        <h1>Hora do dia!</h1>
+    </header>
 
-    </div>
-    <script>
-
-        function verifica(){
-            var pais = window.document.getElementById('txtpais');
-            var res = window.document.querySelector('div#res');
-
-            if (pais == 'Brasil') {
-                res.innerHTML = `Bem vindo conterrâneo `;
-            } else {
-                res.innerHTML = `Bem vindo estrangeiro `;
-            }
-        };
-    </script>
+    <section>
+        
+        <div id="msg">
+            aqui vai aparecer uma mensagem.
+        </div>
+        <div id="imagem">
+            <img src="../img/manha.jpg" alt="foto do dia">
+        </div>
+    </section>
+    <footer>
+        <p>&copy;&nbsp;Cursoemvideo</p>
+    </footer>
+    <script src="../javascript/script.js"></script>
 </body>
 
 </html>
