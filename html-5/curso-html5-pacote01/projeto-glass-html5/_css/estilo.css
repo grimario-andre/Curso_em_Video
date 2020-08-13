@@ -23,7 +23,7 @@ p{
 header#cabecalho img#icone{
     position: absolute;
     left: 1180px;
-    top: 70px;
+    top: 50px;
 }
 
 header#cabecalho{
@@ -51,9 +51,7 @@ header#cabecalho h2{
     margin: 0px;
 }
 
-
 /* formatação de imagens com legendas */
-
 figure.foto_legenda{
     position: relative;
     border: solid;
@@ -122,4 +120,30 @@ nav#menu a{
 nav#menu a:hover{
     color: white;
     text-decoration: underline;
+}
+
+/* formatação sessao. */
+section#corpo{
+    display: block;
+    width: 600px;
+    float: left;
+    border-right: 1px solid #606060;
+    padding: 10px;
+}
+
+/*formatação sessao lateral. */
+aside#lateral{
+    display: block;
+    width: 400px;
+    float: right;
+}
+
+/*formatação rodapé */
+footer#rodape{
+    clear: both;
+    border-top: 1px solid #606060;
+}
+
+footer#rodape p{
+    text-align: center;
 }

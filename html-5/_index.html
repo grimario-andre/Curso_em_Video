@@ -8,20 +8,32 @@
 </head>
 
 <body>
-    <h3>Exibindo Asterísticos!</h3>
-
+    <h3>Working with HTML</h3>
+    <input type="text" id="numero">
+    <input type="submit" id="advinhar" value="Compare com o numero que estou pensando!" onclick="clickbotao()" >
     <script>
-        var mostra = function (frase) {
-            return window.document.write(frase + "<br><hr>");
-        };
-        
 
-        for (linha = 0; linha < 10; linha ++) {
-            for(coluna = 1; coluna <= linha; coluna ++){
-                window.document.write("*");
-            };
-            window.document.write("<br>");
+        var segredo = function(){
+            return Math.round(Math.random() * 5);
         };
+
+        var cxtext = window.document.getElementById('numero');
+        
+        var clickbotao = function(){
+            if (segredo == cxtext.value) {
+                window.alert(`Parabéns! Você acertou o número secreto.`);
+            } else {
+                window.alert(`Infelizmente você errou. `);
+            }
+
+        };
+
+        cxtext.value = " ";
+
+        var btadivinhar = window.document.getElementById('adivinhar');
+        //btadivinhar.onclick = clickbotao();
+
+        
     </script>
 </body>
 
