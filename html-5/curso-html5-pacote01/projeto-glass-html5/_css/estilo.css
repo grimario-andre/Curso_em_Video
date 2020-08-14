@@ -7,6 +7,50 @@ body{
     color:  rgba(00, 00, 00, 1);
 }
 
+table#tabelaspec{
+    border-block-color: #dddddd;
+    border-radius: 1px;
+    border-style: solid;
+    border-spacing: 0px; /* espaçamento entre as bordas da tabale e das células/-colunas. */;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+table#tabelaspec td{
+    border-block-color: #dddddd;
+    border: 1px solid #060606;
+    padding: 10px;
+    margin: 0px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+table#tabelaspec td.ce{
+    color: white;
+    background-color: #606060;
+    vertical-align: top;
+    font-weight: bold;
+    border: 0px;
+}
+
+table#tabelas td.cd{
+    background-color: #cecece;
+}
+
+table#tabelaspec caption{
+    color: #888888;
+    font-size: 13pt;
+    font-weight: bolder;
+}
+
+table#tabelaspec caption span{
+    display: block;
+    float: right;
+    color: #060606;
+    font-size: 8pt;
+    margin-top: 10px
+}
+
 div#interface{
     width: 1080px;
     background-color: white;
@@ -136,6 +180,8 @@ aside#lateral{
     display: block;
     width: 400px;
     float: right;
+    padding-right: 25px;
+    margin: auto;
 }
 
 /*formatação rodapé */
