@@ -1,22 +1,54 @@
-function carregar() {
-    var msg = window.document.getElementById('msg');
-    var foto = window.document.getElementById('imagem');
+function verificar(params) {
     var data = new Date();
-    var hora = data.getHours();
-    var minutos = data.getMinutes();
-    
-    msg.innerHTML = `Agora são ${hora}:${minutos} horas.`;
+    var ano = data.getFullYear();
+    var btano = window.document.getElementById('txtano');
+    var res = document.querySelector('div#res');
 
-    if (hora >= 0 && hora < 12) {
-        foto.src = "../img/manha.jpg";
-        document.body.style.background = '#d3853b';        
+    //verifcar se o botao ano tem problemas21.
+    if (btano.value.length == ' ' || Number(btano.value) > ano || Number(btano.value) == 0) {
+        window.alert(`[ERRO]! Verifique o ano novamente`);
     }else{
-        if (hora > 12 && hora < 18) {
-            foto.src = "../img/tarde.jpg";
-            document.body.style.background = '#c12902'
-        } else {
-            foto.src = "../img/noite.jpg";
-            document.body.style.background = '#3a5e78'
-        };
+        var fsex = window.document.getElementsByName('radsex');
+        var idade =  ano  - parseInt(btano.value);
+        var genero = '';
+        var img = window.document.createElement('img'); //inserir-criar tag <img> dinâmicamente.
+        img.setAttribute('id', 'foto'); // setar atributo id e seu nome na tag-Element <img>.
+
+        if (fsex[0].checked) {
+            genero = 'Homem';
+           
+            if (idade >= 1 && idade < 13) {
+                //crinaça
+                img.setAttribute('src','../img/homem-crianca.jpg');
+            } else if (idade < 21) {
+                //jovem
+                img.setAttribute('src','../img/homem-jovem.jpg');
+            }else if (idade < 50) {
+                //adulto
+                img.setAttribute('src','../img/homem-adulto.jpg');
+            }else {
+              //idoso.  
+              img.setAttribute('src',  '../img/homem-velho.jpg');
+            };
+        } else if(fsex[1].checked){
+            genero = 'Mulher';
+
+            if (idade >= 1 && idade < 13) {
+                //crinaça
+                img.setAttribute('src', '../img/mulher-crianca.jpg');
+            } else if (idade < 21) {
+                //jovem
+                img.setAttribute('src', '../img/mulher-jovem.jpg');
+            }else if (idade < 50) {
+                //adulta
+                img.setAttribute('src', '../img/mulher.jpg');
+            }else {
+              //idosa.  
+              img.setAttribute('src', '../img/mulher-velha.jpg');
+            };
+        }
+
+        res.innerHTML = `Detectamos ${genero} com ${idade} anos.`;
+        res.appendChild(img); //comando para add tag-Elements.
     };
 };
