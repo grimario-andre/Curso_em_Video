@@ -15,14 +15,14 @@
         var telas = window.document.getElementById('tela');
         var c = tela.getContext('2d');
 
-        c.fillStyle = 'white';
-        c.fillRect(0 , 0, 200, 200);
+        c.fillStyle = 'red';
+        c.fillRect(0 , 0, 600, 100);
+
+        c.fillStyle = 'blue';
+        c.fillRect(0, 100, 600, 200);
 
         c.fillStyle = 'red';
-        c.fillRect(200, 0, 600, 200);
-
-        c.fillStyle = 'green';
-        c.fillRect(200, 200, 600, 200);
+        c.fillRect(0, 200, 600, 100);
 
         /*
         c.fillStyle = 'gray';
@@ -31,12 +31,13 @@
         c.lineTo(200, 400);
         c.lineTo(400,400);
         c.fill();
+        */
 
-        c.fillStyle = 'blue';
+        c.fillStyle = 'white';
         c.beginPath();
-        c.arc(300, 200, 50, 0, 2 * 3.14 ); 
+        c.arc(300, 150, 40, 0, 2 * 3.14 ); 
         c.fill();
-            */
+            
         
         /*
                 function sorteio(sorteados) {
