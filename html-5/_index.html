@@ -8,29 +8,30 @@
 </head>
 
 <body>
-    <h3>Working with HTML</h3>
-    <input type="text" id="numero">
-    <input type="submit" id="verificar" value="Compare com o numero que estou pensando!" onclick="addnumero()">
+    <h3>Working with Canvas</h3>
+    
+    <canvas id="tela" width="600" height="400"></canvas>
     <script>
+        var telas = window.document.getElementById('tela');
+        var c = tela.getContext('2d');
 
-        var sorteados = [];
+        c.fillStyle = 'green';
+        c.fillRect(0, 0, 200, 400);
 
-        for (i = 0; i < 6; i++) {
-            var nsorteados = Math.round(Math.random() * 60);
-            sorteados.push(nsorteados);
-        };
+        c.fillStyle = 'red';
+        c.fillRect(400, 0, 200, 400);
 
-        window.console.log("capturar os numeros digitado pelo usuário.foto_legenda");
+        c.fillStyle = 'gray';
+        c.beginPath();
+        c.moveTo(300,200);
+        c.lineTo(200, 400);
+        c.lineTo(400,400);
+        c.fill();
 
-        var numeros = [];
-
-        function addnumero() {
-            var numero = window.document.getElementById('numero').value;
-            numeros.push(numero);
-
-            console.log(numeros);
-        };
-
+        c.fillStyle = 'blue';
+        c.beginPath();
+        c.arc(300, 200, 50, 0, 2 * 3.14 ); 
+        c.fill();
         /*
                 function sorteio(sorteados) {
                     for (i = 0; i < 5; i++) {
