@@ -5,32 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css-3/estilo.css">
-    <title>SUper Contador</title>
+    <title>Tabuada</title>
 </head>
 
 <body>
     <header>
-        <h1>Contador Inicio Fim</h1>
+        <h1>Tabuada</h1>
     </header>
 
     <section>
 
-        <div id="dados">
-            <p>Início: &nbsp;
-                <input type="number" name="nicio" id="txti" min="0">
-            </p>
-            <p>Fim: &nbsp;
-                <input type="number" name="fim" id="txtf" min="0">
-            </p>
-            <p>Passo: &nbsp;
-                <input type="number" name="passo" id="txtp" min="0">
-            </p>
-            <p>Contar:
-                <input type="button" value="contar" onclick="contar()">
+        <div>
+            <p>Número:
+                <input type="number" name="num" id="txtn">
+                <input type="button" value="Exibir tabuada" onclick="tabuada()">
             </p>
         </div>
-        <div id="res">
-            Vamos contar...
+            <select name="tabuada" id="seltab" size="10"></select>
+            
+            <option>Digite um número acima</option>
+        <div>
+            
         </div>
     </section>
     <footer>
