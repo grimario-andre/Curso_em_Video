@@ -5,32 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css-3/estilo.css">
-    <title>Modelo Verificador de idade</title>
+    <title>SUper Contador</title>
 </head>
 
-<body onload="carregar()">
+<body>
     <header>
-        <h1>Verificador de idade</h1>
+        <h1>Contador Inicio Fim</h1>
     </header>
 
     <section>
 
-        <div>
-            <p>Ano de Nascimento</p>
-            <input type="number" name="txtano" id="txtano" min="0">
-
-            <p>Sexo: &nbsp;
-                <input type="radio" name="radsex" id="mas" checked>
-                <label for="mas">Masculino</label>
-                <input type="radio" name="radsex" id="fem">
-                <label for="fem">Feminino</label>
+        <div id="dados">
+            <p>Início: &nbsp;
+                <input type="number" name="nicio" id="txti" min="0">
             </p>
-            <p>
-                <input type="button" value="Verificar" onclick="verificar()">
+            <p>Fim: &nbsp;
+                <input type="number" name="fim" id="txtf" min="0">
+            </p>
+            <p>Passo: &nbsp;
+                <input type="number" name="passo" id="txtp" min="0">
+            </p>
+            <p>Contar:
+                <input type="button" value="contar" onclick="contar()">
             </p>
         </div>
         <div id="res">
-            Preencha os dados acima para ver o resultado
+            Vamos contar...
         </div>
     </section>
     <footer>

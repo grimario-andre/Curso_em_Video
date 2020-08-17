@@ -33,7 +33,8 @@ if (idade < 16) {
 };
     */
 
-var agora = Date.UTC();
+/*
+    var agora = Date.UTC();
 
 var diaSem = 0;
 
@@ -66,3 +67,16 @@ switch (diaSem) {
         break;    
 }
 
+c = 1
+
+
+while (c <= 6) {
+    console.log('tudo bem');
+    c ++;
+};
+    */
+
+do {
+    console.log('tudo bem');
+    c ++;
+} while (c <= 6);
