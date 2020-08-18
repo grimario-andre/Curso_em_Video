@@ -12,45 +12,73 @@
     
     <canvas id="tela" width="600" height="400"></canvas>
     <script>
-        var telas = window.document.getElementById('tela');
-        var c = tela.getContext('2d');
+        function dquadrado(x,y,cor1,cor2) {
+            var tela = document.getElementById('tela');
+            var c = tela.getContext('2d');
 
-        c.fillStyle = 'green';
-        c.fillRect(0 , 0, 600, 400);
+            //verde
+            c.fillStyle = cor1;
+            c.fillRect(x,y,50,50);
 
-        c.fillStyle = 'yellow';
-        c.beginPath();
-        c.moveTo(0,100);
-        c.lineTo(0,200);
-        c.lineTo(0,200);
-        c.lineTo(150,300);
-        c.lineTo(400,150);
-        c.fill();
-        
-       /* 
-        c.fillStyle = 'yellow';
-        c.beginPath();
-        c.moveTo(0,500);
-        c.lineTo(200,100);
-        c.lineTo(200,300);
-        c.fill();
-        
-        c.fillStyle = 'orange';
-        c.beginPath();
-        c.arc(300, 150, 40, 0, 2 * 3.14 ); 
-        c.fill();
-            */    
+            //apliar borda.
+            c.strokeStyle = cor2;
+            c.strokeRect(x,y,50,50);
+
+            //vermelho
+            c.fillStyle = cor1;
+            c.fillRect(x,y,50,50);
+
+            //aplicar borda
+            c.strokeStyle = cor2;
+            c.strokeRect(x,y,50,50);
+        };
         
         /*
-                function sorteio(sorteados) {
-                    for (i = 0; i < 5; i++) {
-                        var nsorteados = Math.round(Math.random() * 60);
-                        sorteados.push(nsorteados);
-                    };
+        function dquadradoverde(x,y) {
+            var tela = document.getElementById('tela');
+            var c = tela.getContext('2d');
 
-                    return sorteio();
-                };
-                    */
+            c.fillStyle = 'green';
+            c.fillRect(x,y,50,50);
+
+            //apliar borda.
+            c.strokeStyle = 'black';
+            c.strokeRect(x,y,50,50);
+        };
+           
+
+        function dquadradovermelho(x,y) {
+            var tela = window.document.querySelector('canvas#tela');
+            var c = tela.getContext('2d');
+
+            c.fillStyle = 'red';
+            c.fillRect(x,y,50,50);
+
+            c.strokeStyle = 'black';
+            c.strokeRect(x,y,50,50);
+        };
+             */
+
+        function dcirculoazul(x,y) {
+            var tela = window.document.querySelector('canvas#tela');
+            var c = tela.getContext('2d');
+
+            c.fillStyle = 'blue';
+            c.beginPath();
+            c.arc(x,y,25,0, 2*3.14);
+            c.fill();
+        }
+
+        for (x = 0; x < 600; x += 50) {
+            dquadrado(x,0,'green','black');
+            dquadrado(x,50,'red', 'black');
+        }
+
+        for (x = 25; x < 600; x += 50) {
+            dcirculoazul(x,100);
+        }
+
+
     </script>
 </body>
 
