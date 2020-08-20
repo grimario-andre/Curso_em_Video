@@ -9,15 +9,17 @@
 
 <body>
     <h3>knowing try catch finally </h3>
+        <p id="texto">knowing javascript</p>
+        <p>knowing1 javascript</p>
+        <p>knowing2 javascript</p>
+        <p>knowing3 javascript</p>
     <script>
-        try {
-            alertt('CFB');
-        } catch(erro) {
-            document.write(erro.message + "<br>");
-        }finally{ //this comand is not necessary.
-            document.write("Comando try finalizado com sucesso!");
-        }
-            
+        tx = window.document.getElementById('texto');
+        tx.style.color = '#f00';
+        tx.innerHTML = `aeuaehuaheuhaeuheauhe `;
+
+        tx1 = window.document.getElementsByTagName('p')[2];
+        tx1.innerHTML = ` hkdjdhsjdjhshjrhnbs`;
     </script>
 </body>
 
