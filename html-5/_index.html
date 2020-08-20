@@ -8,27 +8,23 @@
 </head>
 
 <body>
-    <h3>Working with Switch </h3>
-    <input type="number" name="vlnum" id="vlnum">
-    <input type="submit" value="Enviar" id="verificar" onclick="verificaPosicao()">
+    <h3>Working with Arrays </h3>
     <div id='posicao'></div>
 
     <script>
-        var valorn = window.document.getElementById('vlnum').value;
-        // var vernum = window.document.querySelector('input#verificar');
-        var exibepos = window.document.getElementById('posicao');
+            var exibe = window.document.querySelector('div#posicao');
 
-        function verificaPosicao() {
-           switch (valorn) {
-                case 1, 2, 3:
-                    exibepos.innerHTML = `O corredor subiu ao pódio!`;
-                    break;
+            var mochila = new Array();
 
-                default:
-                    exibepos.innerHTML = `O corredor não chegou ao pódio!`;
-                    break;
-            }
-        }
+            mochila.push("corda"); //insere um novo elementeo ao final do array.
+            mochila.push("faca");
+            mochila.push("arame");
+            mochila.push("pedra");
+
+            mochila.splice(2,4); // corta o array em um deternimado ponto.
+            mochila.sort(); // faz ordenação crescente.
+
+            exibe.innerHTML = `QT itens da mochilha ${mochila.length} e seus itens: <br>${mochila} `;
     </script>
 </body>
 
