@@ -8,49 +8,15 @@
 </head>
 
 <body>
-    <h3>Working with Arrays </h3>
-    <div id='posicao'></div>
-
+    <h3>knowing try catch finally </h3>
     <script>
-            var exibe = window.document.querySelector('div#posicao');
-
-            var mochila = new Array();
-
-            // criar 6 arrays cada um contendo dois elementos.
-            var item1 = ["corda", 1];
-            var item2 = ["faca", 2];
-            var item3 = ["remedio", 10];
-            var item4 = ["pedra", 32];
-            var item5 = ["pilha", 6];
-            var item6 = ["lanterna", 1];
-
-            mochila.push(item1); //insere um novo elementeo ao final do array.
-            mochila.push(item2);
-            mochila.push(item3);
-            mochila.push(item4);
-            mochila.push(item5);
-            mochila.push(item6);
-
-            var time = new Array();
-            var qtjogador;
-
-            //qtjogador = ["Fred",35];
-            time[0] = qtjogador = ["fred",35];
-
-            //qtjogador = ["joao",19];
-            time[1] = qtjogador = ["joao",19]; 
-
-            //qtjogador = ["caio",18];
-            time[2] = qtjogador = ["caio",19];
-           
-            for (i = 0; i < time.lenght; i ++){
-                for (i2 = 0; i2 < qtjogador.length; i2 ++){
-                    exibe.innerHTML = `QT slots da mochilha ${time}`;
-                    exibe.innerHTML = `QT slots da mochilha ${qtjogador}`;
-                };
-            };
-
-            //exibe.innerHTML = `QT slots da mochilha ${mochila.length}/${mochila.length} e seus itens/qt unidades: <br> ${"<br>" + mochila}`;
+        try {
+            alertt('CFB');
+        } catch(erro) {
+            document.write(erro.message + "<br>");
+        }finally{ //this comand is not necessary.
+            document.write("Comando try finalizado com sucesso!");
+        }
             
     </script>
 </body>
