@@ -5,6 +5,7 @@
 body{
     background-color:#dddddd;
     color:  rgba(00, 00, 00, 1);
+    font-family: Arial;
 }
 
 table#tabelaspec{
@@ -62,6 +63,15 @@ div#interface{
 p{
     text-align: justify;
     text-indent: 50px;
+}
+
+a{
+    color: #606060;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
 }
 
 header#cabecalho img#icone{
@@ -169,19 +179,63 @@ nav#menu a:hover{
 /* formatação sessao. */
 section#corpo{
     display: block;
-    width: 600px;
+    width: 550px;
     float: left;
     border-right: 1px solid #606060;
     padding: 10px;
 }
 
+article#noticia-principal h2 {
+    font: 13 pt;
+    color: #606060;
+    background-color: #dddddd;
+    padding: 5px 0px 5px 10px;
+    margin: 10px 0px 10px 0px;
+}
+
+header#cabecalho-artigo h1{
+    font-family: 'Fonte-log', sans-serif;
+    font-style: 20pt;
+    color: #606060;
+    margin-top: 0px;
+}
+
+header#cabecalho-artigo h2{
+    font-size: 13pt;
+    color: #cecece;
+    background-color: #ffffff;
+    margin: 0px;
+}
+
+header#cabecalho-artigo h3{
+    font-size: 12pt;
+    color: #606060;
+}
+
+.direita{
+    text-align: righ;
+}
+
+aside#lateral h1{
+    font-family: 'Font-logo', sans-serif;
+    font-size: 15pt;
+    color: #060606;
+}
+
+aside#lateral h2{
+    background-color: #606060;
+    font-size: 13pt;
+    color: #ffffff;
+    padding: 5px;
+}
 /*formatação sessao lateral. */
 aside#lateral{
     display: block;
-    width: 400px;
+    width: 475px;
     float: right;
-    padding-right: 25px;
-    margin: auto;
+    padding: 10px;
+    margin: 10px auto auto auto;
+    background-color: #88888850;
 }
 
 /*formatação rodapé */
