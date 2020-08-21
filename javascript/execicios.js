@@ -1,26 +1,15 @@
-let num = [5,8,2,9,3];
+var n ;
+var txt = window.document.getElementById('txtn').value;
+var res = window.document.querySelector('div#res');
 
-//adicionar valor ao vetor.
-num[3] = 6; /* or */ num.push(7); 
-
-//saber o tamanho de um vetor.
-//.length;
-
-//deixar em ordem crescente o vator.
-//.sort
-//console.log(num.sort());
-
-/*
-for (pos = 0; pos < num.length; pos ++){
-    console.log(`a posição ${pos} tem o valor ${num[pos]}`);
+function parimpar(txt) {
+    
+    n = txt % 2;
+    if (n == 0) {
+       return 'par';
+    } else {
+       return 'impar';
+    };    
 };
-    */
 
-//versão otimizada do for focada para matrizes.
-for (const pos in num) {
-    console.log(`a posição ${pos} tem o valor ${num[pos]}`);
-}
-
-if (num.indexOf() == -1) {
-    console.log('Valor não encontrado');
-};
+res.innerHTML = `O valor de ${n} `;
