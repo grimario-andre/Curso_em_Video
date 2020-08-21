@@ -5,20 +5,19 @@
     <title>Curso de Javascript</title>
     <meta charset=“UTF-8”>
     <script>
-        /*
-        var timer = setTimeout(cfb, 5000);
-        function cfb() {
-            window.document.write('canal fessor Bruno!');
-        }
-            */
-        var timer = setInterval(cfb, 5000);
-        function cfb() {
-            for(i= 0; i < 10; i ++){
-                window.document.write('canal fessor Bruno!<br>');
-            }
+        var cores = ["#F00","#0F0","#00F","#FF0","#0FF","#F0F","#000","#FFF"];
+        var timer = setInterval(exibeCores,1000);
+        var i = 0;
 
-            clearInterval(timer);
-        } 
+        function exibeCores() { 
+            window.document.body.style.backgroundColor = cores[i];
+            i ++;       
+            if (i >= cores.length) {   
+                i = 0;
+            }
+        }
+
+         
     </script>
 </head>
 
