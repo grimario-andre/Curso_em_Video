@@ -1,82 +1,26 @@
-//console.log("O console funcinou corretamente ");
-/*
-var vel = 78.2;
+let num = [5,8,2,9,3];
 
-console.log(`A velocidade do seu é: ${vel}km/h`);
+//adicionar valor ao vetor.
+num[3] = 6; /* or */ num.push(7); 
 
-//condição simples.
-if (vel > 60) {
-    console.log(`você ultrapassou a velocidade permitida. MULTADO!`);
-}
+//saber o tamanho de um vetor.
+//.length;
 
-console.log(`Dirija sempre usando o cinto de segurança.`);
-
-    */
-
-//verificar vive ou não no Brasil.
+//deixar em ordem crescente o vator.
+//.sort
+//console.log(num.sort());
 
 /*
-var idade = 65;
-
-if (idade < 16) {
-    console.log(`Não vota`);
-}else{
-    if((idade >= 16 ) && (idade < 18)){
-        console.log('voto opcional');
-    }else{
-        if ((idade >= 18) && (idade < 65)) {
-            console.log(`Voto obrigatório`);
-        } else {
-            console.log(`Voto opcional`);
-        }
-    }
+for (pos = 0; pos < num.length; pos ++){
+    console.log(`a posição ${pos} tem o valor ${num[pos]}`);
 };
     */
 
-/*
-    var agora = Date.UTC();
-
-var diaSem = 0;
-
-switch (diaSem) {
-    case 0:
-        diaSem = (`Domingo`);
-        break;
-    
-    case 1:
-        diaSem = (`Segudna`);
-        break;
-
-    case 2:
-        diaSem = (`Terça`);
-        break
-    case 3:
-        diaSem = (`Quarta`);
-        break;
-
-    case 4:
-        diaSem = (`Quinta`);
-        break;
-        
-    case 5:
-        diaSem = (`Sexta`);
-        break;
-    
-    case 6:
-        diaSem = (`Sabado`);
-        break;    
+//versão otimizada do for focada para matrizes.
+for (const pos in num) {
+    console.log(`a posição ${pos} tem o valor ${num[pos]}`);
 }
 
-c = 1
-
-
-while (c <= 6) {
-    console.log('tudo bem');
-    c ++;
+if (num.indexOf() == -1) {
+    console.log('Valor não encontrado');
 };
-    */
-
-do {
-    console.log('tudo bem');
-    c ++;
-} while (c <= 6);
