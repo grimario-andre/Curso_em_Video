@@ -212,8 +212,9 @@ header#cabecalho-artigo h3{
     color: #606060;
 }
 
-.direita{
+span.direita h3{
     text-align: righ;
+    float: right;
 }
 
 aside#lateral h1{
@@ -247,3 +248,4 @@ footer#rodape{
 footer#rodape p{
     text-align: center;
 }
+
