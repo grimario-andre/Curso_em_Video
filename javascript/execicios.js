@@ -1,15 +1,28 @@
-var n ;
-var txt = window.document.getElementById('txtn').value;
+var num = window.document.querySelector('input#fnum');
+var num = window.document.querySelector('select#flista');
 var res = window.document.querySelector('div#res');
+var valores = [];
 
-function parimpar(txt) {
-    
-    n = txt % 2;
-    if (n == 0) {
-       return 'par';
-    } else {
-       return 'impar';
-    };    
+function isNumero(n) {
+   if (Number(n) >= 1 && Number(n) <= 100) {
+      return true;
+   }else{
+      return false;
+   };
 };
 
-res.innerHTML = `O valor de ${n} `;
+function inLista(n,l) {
+   if (l.indexOf(Number(n)) != -1) {
+      return true;
+   }else{
+      return false;
+   }
+}
+
+function adicionar() {
+   if (isNumero(num.value) && !inLista(num.value, valores)){
+      alert('Tudo ok');
+   }else{
+      window.alert('Valor inválido ou ja esta na lista');
+   };
+};
