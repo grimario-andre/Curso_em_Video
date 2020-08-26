@@ -5,15 +5,18 @@
     <title>Curso de Javascript</title>
     <meta charset=“UTF-8”>
     <script>
-        
-        function contador(cont, num) {
-            window.document.write(cont + "<br>");
-            if (num > cont) {
-                contador(++cont, num);
+
+        var num = 8;
+
+        function soma(n) {
+            if(n == 1){
+                return 1;
             };
+
+            return n + soma(n - 1);
         };
-        contador(0, 20);
-    
+        
+        document.write(`fatorial de ${num} é: ${soma(num)}`);
     </script>
 </head>
 
