@@ -5,21 +5,41 @@
     <title>Curso de Javascript</title>
     <meta charset=“UTF-8”>
     <script>
-       var n = 5;
-       document.write('<p id="tx">' + n + '</p>');
-       var tx = window.document.getElementById('tx');
+        function condicional() {
+            let tds = window.document.getElementsByTagName('td');
 
-       if (tx.innerHTML < 10) {
-            tx.style.color="#F00";
-       } else {
-           tx.style.color="#00F";
-       }
+            for (i = 0;  i < tds.length; i ++) {
+                if (tds[i].innerHTML < 15) {
+                    tds[i].style.color = "#F00";
+                };
+            }
+        }
 
     </script>
 </head>
 
-<body>
-   
+<body onload="condicional()">
+    <table width="400px" border="1" cellspacing="0">
+        <tr>
+            <td>Produto</td>
+            <td>quantidade</td>
+        </tr>
+
+        <tr>
+            <td>Mouse</td>
+            <td>5</td>
+        </tr>
+
+        <tr>
+            <td>Teclado</td>
+            <td>30</td>
+        </tr>
+
+        <tr>
+            <td>Monitor</td>
+            <td>10</td>
+        </tr>
+    </table>
 </body>
 
 </html>
