@@ -5,17 +5,21 @@
     <title>Curso de Javascript</title>
     <meta charset=“UTF-8”>
     <script>
-        window.document.write('<p id="curso"> Curso javascript </p>');
-        window.document.querySelector('p#curso').style.color = 'red';
+       var n = 5;
+       document.write('<p id="tx">' + n + '</p>');
+       var tx = window.document.getElementById('tx');
 
-        function carregar() {
-            window.document.querySelector('p#cfb').style.color = 'blue';
-        }
+       if (tx.innerHTML < 10) {
+            tx.style.color="#F00";
+       } else {
+           tx.style.color="#00F";
+       }
+
     </script>
 </head>
 
-<body onload="carregar()">
-    <p id="cfb">Curso fessor Bruno</p>
+<body>
+   
 </body>
 
 </html>
