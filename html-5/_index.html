@@ -5,19 +5,15 @@
     <title>Curso de Javascript</title>
     <meta charset=“UTF-8”>
     <script>
-        var cores = ["#F00","#0F0","#00F","#FF0","#0FF","#F0F","#000","#FFF"];
-        var timer = setInterval(exibeCores,1000);
-        var i = 0;
-
-        function exibeCores() { 
-            window.document.body.style.backgroundColor = cores[i];
-            i ++;       
-            if (i >= cores.length) {   
-                i = 0;
-            }
-        }
-
-         
+        
+        function contador(cont, num) {
+            window.document.write(cont + "<br>");
+            if (num > cont) {
+                contador(++cont, num);
+            };
+        };
+        contador(0, 20);
+    
     </script>
 </head>
 
