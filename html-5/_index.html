@@ -5,39 +5,63 @@
     <title>Curso de Javascript</title>
     <meta charset=“UTF-8”>
     <script>
-        function condicional() {
-            let tds = window.document.getElementsByTagName('td');
+        function imc() {
+            let valt_temp = document.f_imc.f_alt.value;
+            let vpes_temp = document.f_imc.f_pes.value;
 
-            for (i = 0;  i < tds.length; i ++) {
-                if (tds[i].innerHTML < 15) {
-                    tds[i].style.color = "#F00";
-                };
+            if ((Number(valt_temp) == 0 ) || (Number(vpes_temp) == 0)) {
+                alert('Digite o peso ou altura');
+            } else {
+                let valt = valt_temp.replace(",", ".");
+                let vpes = vpes_temp.replace(",", ".");
+
+                var vimc = (vpes/Math.pow(valt,2)).toFixed(1);
+
+                alert('O imc é: ' + vimc);
             }
         }
-
     </script>
 </head>
 
-<body onload="condicional()">
-    <table width="400px" border="1" cellspacing="0">
+<body>
+    <form name="f_imc" method="#" action="#">
+        <label>Altura:</label><br>
+        <input type="text" name="f_alt" id="f_alt">
+        <br><br>
+        <label>Peso:</label><br>
+        <input type="text" name="f_pes" id="f_pes">
+        <br><br>
+        <input type="button" value="Calcular" onclick="imc()">
+    </form>
+    <table style="margin-top: 20px;" border="1" cellspacing="0">
         <tr>
-            <td>Produto</td>
-            <td>quantidade</td>
+            <th width="200px">Condição</th>
+            <th width="100px">Mulheres</th>
+            <th width="100px">Homens</th>
         </tr>
 
         <tr>
-            <td>Mouse</td>
-            <td>5</td>
+            <td>Abaixo do peso</td>
+            <td>19,01</td>
+            <td>20,7</td>
         </tr>
 
         <tr>
-            <td>Teclado</td>
-            <td>30</td>
+            <td>Normal</td>
+            <td>19,1 - 25,8</td>
+            <td>20,7 - 26,4</td>
         </tr>
 
         <tr>
-            <td>Monitor</td>
-            <td>10</td>
+            <td>Pouco acima do peso</td>
+            <td>25,9 - 27,9</td>
+            <td>27,9 - 31,1</td>
+        </tr>
+
+        <tr>
+            <td>Obeso</td>
+            <td> > 32,3</td>
+            <td> > 31,1</td>
         </tr>
     </table>
 </body>
