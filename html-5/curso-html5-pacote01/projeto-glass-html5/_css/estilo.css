@@ -63,6 +63,8 @@ div#interface{
 p{
     text-align: justify;
     text-indent: 50px;
+    margin-top: 50px;
+    padding-left: 40px;
 }
 
 a{

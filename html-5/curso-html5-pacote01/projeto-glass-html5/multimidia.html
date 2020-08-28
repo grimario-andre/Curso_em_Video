@@ -1,25 +1,101 @@
-Google Glass
-A revolução do Google está chegando
+<!DOCTYPE html>
+<!-- tag e noma usado para cada tipo de marcação do html-5 -->
+<!-- tag lang determina a linguagem automaticamente pelo navegador -->
+<html lang="pt-br">
 
-[AQUI ENTRA UMA FOTO]
+<!-- Cabeçalho -->
 
-Menu Principal
-- Home
-- Especificações
-- Fotos
-- Multimídia
-- Fale conosco
+<head>
+    <!-- tag charset permite escolhe o padrão da linguagem a ser usada -->
+    <meta charset="utf-8" />
+    <title>Everything about google Glass</title>
+    <title>Maldição HTML</title>
 
-Glass > Multimídia
-Sons e Vídeos
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
+    <link rel="stylesheet" type="text/css" href="../projeto-glass-html5/_css/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="../projeto-glass-html5/_css/media.css">
+</head>
+<script src="_javascript/funcoes.js">
 
+</script>
+<!-- Corpo -->
 
-Áudio e Vídeo
+<body>
+    <!-- interface do site -->
+    <div id="interface">
+        <!-- cabeçalho do site -->
+        <header id="cabecalho">
+            <!-- tag hgroup server para agrupar muitos titulos, aplicação semantica -->
+            <hgroup>
+                <h1>Google Glass</h1>
+                <h2>A revolução do Google está chegando</h2>
+            </hgroup>
 
-[AQUI ENTRA UM VÍDEO]
-[AQUI ENTRA UM ÁUDIO]
+            <!-- tag img insere um imagem -->
+            <img id="icone" src="../projeto-glass-html5/_imagens/multimidia.png" alt="">
 
-Copyright 2013 - by Gustavo Guanabara
-Facebook | Twitter
+            <!-- Menu -->
+            <nav id="menu">
+                <h1>Menu Principal</h1>
+                <!-- a tag lista se divide em  <ol> e <ul> para formas listas ordenadas ou nao ordenadas -->
+                <!-- Os parâmetros type serve para dar um tipo ordem numerica ou alfabetica a lista e o start permite que comece em determinado valor ou letra. -->
+                <ul type="dics">
+                    <li onmouseover="mudaFoto('_imagens/home.png')"><a href="index.html" target="_self"
+                            onmouseout="mudaFoto('../projeto-glass-html5/_imagens/multimidia.png')"> Home
+                    </li></a>
+                    <li onmouseover="mudaFoto('_imagens/especificacoes.png')"
+                        onmouseout="mudaFoto('../projeto-glass-html5/_imagens/multimidia.png')"><a
+                            href="specs.html" target="_self"> Especificações</li></a>
+                    <li onmouseover="mudaFoto('_imagens/fotos.png')"
+                        onmouseout="mudaFoto('../projeto-glass-html5/_imagens/multimidia.png')"><a
+                            href="fotos.html" target="_self"> Fotos</li></a>
+                    <li onmouseover="mudaFoto('_imagens/multimidia.png')"
+                        onmouseout="mudaFoto('../projeto-glass-html5/_imagens/multimidia.png')"><a
+                            href="multimidia.html" target="_self"> Multimídia</li></a>
+                    <li onmouseover="mudaFoto('_imagens/contato.png')"
+                        onmouseout="mudaFoto('../projeto-glass-html5/_imagens/multimidia.png')"><a
+                            href="fale-conosco.html" target="_self"> Fale conosco</li></a>
+                </ul>
+
+            </nav>
+        </header>
+
+        <section id="corpo-full">
+            <artical id="noticia-principal">
+                <header id="cabecalho-artigo">
+                    <hgroup>
+                        <h3> Glass > Multimídia </h3>
+                        <h1> Sons e Vídeos </h1>
+                        <h2> por Gustavo Guanabara </h2>
+                        <span class="direita">
+                            <h3> Atualizado em 01/Maio/2013 </h3>
+                        </span>
+                    </hgroup>
+                </header>
+                <p> Veja na nossa galeria de fotos várias belas imagens que mostram algumas das principais
+                    características do
+                    Google Glass, como recursos e propriedades que estão impressionando o mundo inteiro. Basta passar o
+                    mouse
+                    sobre uma das fotos para ver uma versão ampliada e com uma breve descrição.</p>
+                
+                <div id="tv-radio">
+                    <audio id="musica" src="../projeto-glass-html5/_media/2009-lovers-carvings-bibio.mp3" type="audio/mpeg" controls="controls">
+                        Desculpe, mas não foi possível carregar o áudio.
+                    </audio>
+
+                    <video id="filme03" src="../projeto-glass-html5/_media/getting-started.mp4" controls="controls" poster="../projeto-glass-html5/_imagens/video-mini03.jpg">
+                        Desculpe, mas não foi possível carregar o vídeo.
+                    </video>
+                </div>
+            </artical>
+        </section>
+        <footer id="rodape">
+            <p>&copy; &nbsp; Copyright 2013 - by Gustavo Guanabara</p>
+            <a href="http://Facebook.com/cursosemvideo" target="_blank">
+                <p>&reg; Facebook
+            </a> |
+            <a href="http://Twitter.com/cursosemvideo" target="_blank">Twitter</p></a>
+        </footer>
+    </div>
+</body>
+
+</html>
