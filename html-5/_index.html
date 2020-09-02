@@ -4,62 +4,40 @@
 <head>
     <title>Curso de Javascript</title>
     <meta charset=“UTF-8”>
+    
     <style>
-        div#dvSlider{
-            width: 500px;
-            height: 150px;
-        }
-
-        #bt{
-            color:#FFF;
-            background-color: #000;
-            border: 0px;
-        }
+    
     </style>
+
     <script>
-        var slides = ["s1.jpg","s2.jpg","s3.jpg"];
-        var tam = slides.length;
+        function classe() {
+            window.document.getElementById('cfb').setAttribute('class','txth1');
+            window.document.getElementById('cfb2').setAttribute('class','txth2');
+            window.document.getElementById('cfb').setAttribute('style','background-color:#AAA; color:#F00; font-size:45pt;');
+            window.document.getElementById('cfb2').setAttribute('style','background-color:#AAA; color:#F00; font-size:45pt;');
 
-        var satual =1;
-        var tempSlider;
-
-        function trocaAutomatica() {
-            if(satual >= tam){
-                satual = 0;
+            if (document.getElementById('cfb').hasAttribute('style')) {
+                alert('Elemento style já configurado');
+            } else {
+                alert('Style not configured');
             }
-
-            document.getElementById('dvSlider').style.backgroundImage="url('"+ slides[satual] +"')";
-        }
-
-        function iniciaSlider() {
-            document.getElementById('dvSlider').style.backgroundImage="('"+slides[satual]+"')";
-            tempSlider=setInterval(trocaAutomatica,3000);
-        }
-
-        function parar() {
-            clearInterval(tempSlider);
-        }
-
-        function troca(dir) {
-            satual+= dir;
-            if (satual < 0) {
-                stual = 2;
-            }else if(satual >= tam){
-                satual = 0;
-            }
-            document.getElementById('dvSlider').style.backgroundImage="url('"+slides[satual]+"')";
-            clearInterval(tempSlider);
-            tempSlider = setInterval(trocaAutomatica,3000);
         }
     </script>
 </head>
 
-<body onload="iniciaSlider()">
-    <div id="dvSlider" onmouseout="iniciaSlider()">
-        <input type="button" value="<" id="bt" onclick="troca(-1)">
-        <input type="button" value=">" id="bt" onclick="troca(1)">
-    </div>
-   
+<body onload="classe()">
+    
+    <h1 id="cfb">
+        Canal Fessor Bruno
+    </h1>
+
+    <h2 id="cfb2">
+        Canal Fessor Bruno
+    </h2>
+
+    <h3 id="cfb">
+        Canal Fessor Bruno
+    </h3>
 </body>
 
 </html>
