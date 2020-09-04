@@ -75,7 +75,7 @@
             </artical>
         </section>
 
-        <form action="" style="margin-top: 50px;">
+        <form method="POST" id="fContato" action="mailto:contato@cursoemvideo.com" style="margin-top: 50px;">
             <fieldset id="usuario">
                 <legend> Identificação do Usuário </legend>
                <p> <label for="cNome"> Nome: </label> <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome completo"></p>
@@ -95,14 +95,31 @@
                 <legend> Endereço do Usuário </legend>
                <p> <label for="cRua"> Logradouro: </label> <input type="text" name="tRua" id="cRua" size="70" maxlength="70" placeholder="Av. Hermenegildo Pereira de França">  </p> 
                <p> <label for="cNumero"> Número: </label> <input type="number" name="tNumero" id="cNumero" min="0" max="9999" placeholder="526"> </p> 
-               <p> Estado: </p>
-               <p> Cidade: </p>
+               <p> <label for="cEst"> Estado: </label> <select name="tEst" id="cEst">
+                   <optgroup label="Região Sudeste">
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="SP" selected>São Paulo</option>
+                        <option value="MG">Minas Gerais</option>
+                   </optgroup>
+                   <optgroup label="Região Sul">
+                        <option value="PR">Paraná</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                   </optgroup>
+               </select> </p>
+               <p><label for="cCid"> Cidade: </label><input type="text" name="tCid" id="cCid" maxlength="40" size="20" placeholder="Sua lista" list="cidade"></p>
+               <datalist id="cidade">
+                   <option value="Rio de Janeiro"></option>
+                   <option value="Nova Iguaçu"></option>
+                   <option value="Niteroi"></option>
+                   <option value="Belford Roxo"></option>
+               </datalist>
             </fieldset>
 
             <fieldset id="mensagem">
                 <legend> Mensagem do Usuário </legend>
-                Grau de Urgência:
-                Mensagem:
+               <p><label for="cUrg"> Grau de Urgência: Min</label> <input type="range" name="tUrg" id="cUrg" max="10"  min="0" step="2">Max</p>
+               <p><label for="cMsg"> Mensagem: </label><textarea name="tMsg" id="cMsg" cols="30" rows="10" placeholder="Deixe aqui sua mensagem"></textarea></p>
             </fieldset>
 
             <fieldset id="pedido">
