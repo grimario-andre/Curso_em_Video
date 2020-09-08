@@ -15,7 +15,14 @@
     <link rel="stylesheet" type="text/css" href="../projeto-glass-html5/_css/form.css">
 </head>
 <script src="_javascript/funcoes.js">
+</script>
 
+<script>
+    function calcTotal() {
+        var qt = parseInt(window.document.getElementById('cQt').value);
+        let tot = qt * 1500;
+        window.document.getElementById('cTot').value = tot;
+    }
 </script>
 <!-- Corpo -->
 
@@ -58,7 +65,6 @@
 
             </nav>
         </header>
-        [AQUI ENTRA UMA FOTO]
 
         <section id="corpo-full">
             <artical id="noticia-principal">
@@ -75,7 +81,7 @@
             </artical>
         </section>
 
-        <form method="POST" id="fContato" action="mailto:contato@cursoemvideo.com" style="margin-top: 50px;">
+        <form method="POST" id="fContato" action="mailto:contato@cursoemvideo.com" style="margin-top: 50px;" oninput="calcTotal()">
             <fieldset id="usuario">
                 <legend> Identificação do Usuário </legend>
                <p> <label for="cNome"> Nome: </label> <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome completo"></p>
@@ -93,7 +99,7 @@
 
             <fieldset id="endereco">
                 <legend> Endereço do Usuário </legend>
-               <p> <label for="cRua"> Logradouro: </label> <input type="text" name="tRua" id="cRua" size="70" maxlength="70" placeholder="Av. Hermenegildo Pereira de França">  </p> 
+               <p> <label for="cRua"> Logradouro: </label> <input type="text" name="tRua" id="cRua" size="50" maxlength="70" placeholder="Av. Hermenegildo Pereira de França">  </p> 
                <p> <label for="cNumero"> Número: </label> <input type="number" name="tNumero" id="cNumero" min="0" max="9999" placeholder="526"> </p> 
                <p> <label for="cEst"> Estado: </label> <select name="tEst" id="cEst">
                    <optgroup label="Região Sudeste">
@@ -124,14 +130,14 @@
 
             <fieldset id="pedido">
                 <legend> Quero um Google Glass </legend>
-                Gostaria de adquirir um Google Glass quando disponível
-                Cor:
-                Quantidade:
-                Preço Total: R$
+               <p><input type="checkbox" name="tPed" id="cPed"> <label for="cPed"> Gostaria de adquirir um Google Glass quando disponível </label></p>
+               <p><label for="cCor"> Cor: </label><input type="color" name="tCor" id="cCOr" value="#0000FF"></p>
+               <p><label for="cQt"> Quantidade: </label><input type="number" name="tQt" id="cQt"></p>
+               <p><label for="cTot"> Preço Total: R$ </label><input type="text" name="tTot" id="cTot" placeholder="Total a pagar" readonly></p>
             </fieldset>
 
 
-            [BOTÃO ENVIAR]
+            <input type="image" src="../projeto-glass-html5/_imagens/botao-enviar.png" name="tBotao"> 
         </form>
         <footer id="rodape">
             <p>&copy; &nbsp; Copyright 2013 - by Gustavo Guanabara</p>
