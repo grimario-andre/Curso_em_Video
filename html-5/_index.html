@@ -12,7 +12,7 @@
     <script>
         var texto = "Curso de JavaScript - Canal Fessor Bruno";
         //var texto = "CanAl CanAl CanAl CanAl CanAl canal canal CANAL";
-        var resultado =  texto.search(/Canal/gi); /* function string match() search selection some specicify of the frase in the var texto. */ 
+        var resultado =  texto.replace(/Canal Fessor Bruno/i,"Usando a função string replace"); /* function string replace() subscribe the frase in the var texto. */ 
     
         document.write(`${resultado} <br>`);
         document.write(resultado.length);
