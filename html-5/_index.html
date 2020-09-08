@@ -12,13 +12,7 @@
     <script>
         var texto = "Curso de JavaScript - Canal Fessor Bruno";
         //var texto = "CanAl CanAl CanAl CanAl CanAl canal canal CANAL";
-        var resultado =  texto.match(/\s/gi); /* function string match() search selection some specicify of the frase in the var texto. the word g is a modify e and the are anothers like i/m 
-        
-        i = seach case-sentive, warever, not do diference between uper or lowercase words.
-        g = Say that is matohod for encounter all ocorensis.
-        m = Normal seach and not armazem in array.
-        s = meta caracter.
-        */
+        var resultado =  texto.search(/Canal/gi); /* function string match() search selection some specicify of the frase in the var texto. */ 
     
         document.write(`${resultado} <br>`);
         document.write(resultado.length);
