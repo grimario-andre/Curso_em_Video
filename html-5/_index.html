@@ -10,34 +10,24 @@
     </style>
 
     <script>
-        function classe() {
-            window.document.getElementById('cfb').setAttribute('class','txth1');
-            window.document.getElementById('cfb2').setAttribute('class','txth2');
-            window.document.getElementById('cfb').setAttribute('style','background-color:#AAA; color:#F00; font-size:45pt;');
-            window.document.getElementById('cfb2').setAttribute('style','background-color:#AAA; color:#F00; font-size:45pt;');
+        var texto = "Curso de JavaScript - Canal Fessor Bruno";
+        //var texto = "CanAl CanAl CanAl CanAl CanAl canal canal CANAL";
+        var resultado =  texto.match(/\s/gi); /* function string match() search selection some specicify of the frase in the var texto. the word g is a modify e and the are anothers like i/m 
+        
+        i = seach case-sentive, warever, not do diference between uper or lowercase words.
+        g = Say that is matohod for encounter all ocorensis.
+        m = Normal seach and not armazem in array.
+        s = meta caracter.
+        */
+    
+        document.write(`${resultado} <br>`);
+        document.write(resultado.length);
 
-            if (document.getElementById('cfb').hasAttribute('style')) {
-                alert('Elemento style já configurado');
-            } else {
-                alert('Style not configured');
-            }
-        }
     </script>
 </head>
 
-<body onload="classe()">
+<body onload="">
     
-    <h1 id="cfb">
-        Canal Fessor Bruno
-    </h1>
-
-    <h2 id="cfb2">
-        Canal Fessor Bruno
-    </h2>
-
-    <h3 id="cfb">
-        Canal Fessor Bruno
-    </h3>
 </body>
 
 </html>
