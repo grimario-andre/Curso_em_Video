@@ -44,7 +44,7 @@ Inicio
       final <- 10
       meio <- 0
       acha <- falso
-      
+
       Enquanto (comeco <= final) e (acha = falso)faca
          meio <- (comeco + final) / 2
          Se(pesq = nome[meio])entao
@@ -57,16 +57,16 @@ Inicio
             Fimse
          Fimse
       Fimenquanto
-      
+
       {exibir a pesquisa}
       Se(acha = verdadeiro)entao
-              escreval(pesq," foi localizado na posição ", meio)
+         escreval(pesq," foi localizado na posição ", meio)
       Senao
-           escreval(pesq, " Não foi localizado ")
+         escreval(pesq, " Não foi localizado ")
       Fimse
-      
+
       escreva("Deseja continuar? [S/N] ")
       leia(resp)
-      
+
    Fimenquanto
 Fimalgoritmo
