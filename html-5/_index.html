@@ -11,8 +11,8 @@
 
     <script>
        var texto = "Curso de JavaScript - Canal Fessor Bruno - CFB <br>";
-       var texto1 = "CanAl CanAl CanAl CanAl CanAl canal canal CANAL";
-        var resultado =  texto.localeCompare(texto1); /* function string localeCmpare() compare strings for are if equals*/ 
+       //var texto1 = "CanAl CanAl CanAl CanAl CanAl canal canal CANAL";
+       var resultado =  texto.slice(13,21); /* function string cut a point A at a point b of the string*/ 
     
         document.write(`${resultado} <br>`);
         document.write(resultado.length);
