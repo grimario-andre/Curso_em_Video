@@ -1,90 +1,76 @@
 Algoritmo "procedimentocalculadora1"
+//
+//
 // Descrição   : Aqui você descreve o que o programa faz! (função)
 // Autor(a)    : Nome do(a) aluno(a)
 // Data atual  : 7/9/2020
 Var
-   //procedimento para somar
-procedimento soma
-var
    n1,n2,rn: real
+
+   //Entrada
+procedimento entrada
+var
 Inicio
-   escreva("Digite um número para somar")
+   escreva("Digite um número para somar ")
    leia(n1)
    escreval()
-   escreva("Digite outro número para somar")
+   escreva("Digite outro número para somar ")
    leia(n2)
    escreval()
+Fimprocedimento
 
-   rn <- n1 + n2
-
-   escreva("A soma dos números será: ", rn)
+//Saida
+procedimento saida
+var
+Inicio
+   escreva("O Resultado de A e B será: ", rn)
    escreval()
+Fimprocedimento
 
+//Soma
+procedimento soma
+var
+
+Inicio
+   entrada
+   rn <- n1 + n2
+   saida
 fimprocedimento
 
 //procedimento para subtraír
 procedimento subtracao
 var
-   n1,n2,rn: real
 Inicio
-   escreva("Digite um número para subtraír")
-   leia(n1)
-   escreval()
-   escreva("Digite outro número para subtraír")
-   leia(n2)
-   escreval()
-
+   entrada
    Se(n2 > n1)entao
       rn <- n2 - n1
    Senao
       rn <- n1 - n2
    Fimse
-
-   escreva("A subtração dos números será: ", rn)
-   escreval()
-
+   saida
 fimprocedimento
 
 //procedimento para multiplicar
 procedimento multiplicacao
 var
-   n1,n2,rn: real
 Inicio
-   escreva("Digite um número para multiplica")
-   leia(n1)
-   escreval()
-   escreva("Digite outro número para multiplicar")
-   leia(n2)
-   escreval()
-
+   entrada
    rn <- n1 * n2
-
-   escreva("A multiplicação dos números será: ", rn)
-   escreval()
-
+   saida
 fimprocedimento
 
 //procedimento para dividir
 procedimento divisao
 var
-   n1,n2,rn: real
 Inicio
-   escreva("Digite um número para dividir")
-   leia(n1)
+   entrada
    escreval()
-   escreva("Digite outro número para dividir")
-   leia(n2)
-   escreval()
-
    Se(n2 > n1)entao
       rn <- n2 / n1
    Senao
       rn <- n1 / n2
    Fimse
-
-   escreva("A divisão dos números será: ", rn)
-   escreval()
-
+   saida
 fimprocedimento
 
 //procedimento menu principal
@@ -92,7 +78,7 @@ procedimento menu
 var
    opcao: inteiro
 Inicio
-    Enquanto opcao <> 5 faca
+   Enquanto opcao <> 5 faca
 
       escreval("Escolha uma operação")
       escreval("[1] - Adição")
